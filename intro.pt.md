@@ -333,6 +333,21 @@ Uma nota: quando quiseres copiar tem atenção a escrever o caminho correto pois
 
 ## `cat`
 
+O comando `cat` vem de *concatenate* e é usado para mostrar o conteúdo de ficheiros no terminal.
+
+A sintaxe do comando segue o seguinte: 
+```cat [opções] <ficheiros>```shell
+
+O mais habitual é usar o cat sem opções mas ocasionalmente podes vir a ver ou utilizar estas:
+
+- `-n`: numera as linhas do ficheiro no output
+
+- `-E`: preenche o fim de cada linha com '$'
+
+Em suma, se quiseres ver o conteúdo de um ficheiro a partir do terminal podes escrever:
+
+```cat foo.txt```shell
+
 ## `less`
 
 ## `head`
