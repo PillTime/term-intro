@@ -105,7 +105,7 @@ Basta fazer `ls` e ficas a saber o que está dentro da pasta atual:
 
 ### Argumentos
 
-Os comandos podem receber argumentos, que são separados por espaços, e normalmente servem para
+Os comandos podem receber argumentos, que **são separados por espaços**, e normalmente servem para
   indicar onde ou em que coisa é que queres executar o comando.
 Para usares argumentos, basta po-los à frente do comando.
 
@@ -198,7 +198,47 @@ Por exemplo, se fizeres `man 3 stdio`, o `man` vai-te dar informação sobre a b
 
 ## `mkdir`
 
+Como vais precisar de um sítio para guardares os programas que vais fazer durante a faculdade, vamos
+  criar uma pasta para eles.
+Podemos criar pastas com o comando `mkdir` (**M**a**K**e **DIR**ectory).
+
+Para criar uma pasta chamada "Projetos", faz `mkdir Projetos`.
+Podes usar o `ls` para verificar que o comando funcionou:
+![mkdir](./img/term07.png)
+
 ### Espaços no terminal
+
+Lembras-te quando falamos sobre os [espaços serem usados para separar argumentos](#argumentos)?
+Isso causa problemas se tentares criar uma pasta com espaços.
+
+Experimenta criar uma pasta chamada "Uma Pasta" com `mkdir Uma Pasta`.
+Se fizeres `ls`, vais ver que foram criadas duas pastas, uma chamada "Uma", e outra chamada "Pasta".
+A shell divide os argumentos usando os espaços, por isso para ela "Uma" é um argumento e "Pasta" é
+  outro, e o `mkdir` por consequência cria duas pastas, porque recebeu dois argumentos.
+
+Para resolver este problema podes usar aspas para definir algo com espaços como um único argumento,
+  ou seja, fazer `mkdir "Uma Pasta"`.
+
+<details>
+  <summary>CURIOSIDADE: Alternativa às aspas</summary>
+  Em vez de <code>"Uma Pasta"</code>, podes fazer <code>Uma\ Pasta</code>.
+  A diferença é que em vez de usar àspas, podes usar o <i>escape character</i> <code>\</code>, que
+    permite <b>escapar</b> a função especial de carateres.
+  Como o <code>\</code> é um carater para escapar funçionalidades, se o quiseres usar de forma
+    literal, têns que o escapar fazendo <code>\\</code>.
+</details>
+
+## `rmdir`
+
+O contrário do criar pastas com `mkdir` é remove-las com o `rmdir` (**R**e**M**ove **DIR**rectory).
+
+Tal como o `mkdir` e maior parte dos outros comandos, o `rmdir` aceita mais que um argumento, por
+  isso podemos remover as pastas todas que acabamos de criar (exceto a "Projetos") com um só
+  comando: `rmdir "Uma Pasta" Uma Pasta`:
+![rmdir](./img/term08.png)
+
+Atenção que o `rmdir` só consegue apagar pastas vazias. Se a pasta tiver alguma coisa lá dentro o
+  comando vai-se queixar.
 
 ## `cd`
 
@@ -207,8 +247,6 @@ Por exemplo, se fizeres `man 3 stdio`, o `man` vai-te dar informação sobre a b
 ### Ctrl + D
 
 ## `touch`
-
-## `rmdir`
 
 ## `rm`
 
