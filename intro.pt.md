@@ -204,7 +204,10 @@ Por exemplo, se fizeres `man 3 stdio`, o `man` vai-te dar informação sobre a b
 
 ## `clear`
 
-### Ctrl + D
+O comando `clear` é a instrução usada para "limpar" o terminal sem ter de fechar a sessão atual. Intuitivamente, elimina do ecrã todo o texto deixando o terminal limpo para novas instruções. Isto pode ser útil, uma vez que ao programares vais-te deparar muitas vezes com o terminal cheio de conteúdo que já não tem interesse. Ao fazeres `clear` limpas o que está a encher-te o ecrã e ajuda-te a focar no que estás a fazer de momento.
+
+É do teu interesse decorares o comando *Ctrl + D* porque no terminal tem exatamente o mesmo efeito que escreveres `clear`. Assim, sempre que terminares um exercício ou tiveres um output muito extenso podes só dar *Ctrl + D* e é como o Cilit BANG, a sujidade desaparece.
+
 
 ## `touch`
 
