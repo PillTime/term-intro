@@ -179,6 +179,23 @@ Estas pastas ainda podem parecer um bocado esquisitas, mas acredita, vais usá-l
 
 ## `man`
 
+Se estiveres a pensar "Onde é que descubro que flags é que cada comando suporta?", a resposta é
+  `man` (**MAN**ual).
+O comando `man` mostra bastante informação sobre cada comando, tal como se usa, que flags suporta,
+  etc.
+
+Para o usares basta fazer <code>man <b>[commando]</b></code>.
+Por exemplo, `man ls`.
+E sim, também podes fazer `man man`:
+![man man](./img/term06.png)
+
+Para percorrer cada manual, usa as setas do teclado (alguns terminais suportam usar a roda do rato).
+Para sair do manual carrega na tecla `Q`.
+
+Além de comandos, o `man` também pode ser usado para mostrar informação sobre outras coisas.
+Por exemplo, se fizeres `man 3 stdio`, o `man` vai-te dar informação sobre a biblioteca `stdio` do
+  C (o `3` indica a secção onde o `man` vai buscar a informação (lê o `man man`)).
+
 ## `mkdir`
 
 ### Espaços no terminal
