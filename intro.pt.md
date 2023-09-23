@@ -289,6 +289,19 @@ e assim os exercícios ficam divididos pelos ficheiros de texto.
 
 ## `cp`
 
+O comando `cp` significa *copy* (copiar) e o seu objetivo principal é duplicar ficheiros ou directórios. Recebe dois argumentos principais: o ficheiro ou diretório de origem e o destino onde a cópia deve ser colocada. A fonte pode ser um único ficheiro ou um diretório, enquanto o destino pode ser um diretório existente onde a fonte será copiada ou o nome de um novo ficheiro ou diretório a criar. A sintaxe do comando é a seguinte: 
+```cp [opções] <fonte> <destino>```shell
+
+Deixamos aqui 2 exemplos de opções que te podem ser úteis:
+
+- `-r` ou `-R`: usado para copiar diretórios recursivamente, isto é, copiar todo o diretório e o seu conteúdo. Sem esta opção o diretório só é copiado se estiver vazio NÃO TENHO CERTEZA DESTA ULTIMA FRASE
+
+- `-i`: usado para quando quiseres ser avisado de qualquer ficheiro que já exista no ficheiro e se queres dar overwrite ou dar skip
+
+- `-a`: usado para quando queres preservar as propriedades dos ficheiros (como permissão de execução)
+
+Uma nota: quando quiseres copiar tem atenção a escrever o caminho correto pois podes cometer erros facilmente ou o comando simplemsnete não funcionar se não detetar a fonte que queres copiar.
+
 ## `mv`
 
 ## `echo`
