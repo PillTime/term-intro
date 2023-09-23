@@ -105,7 +105,7 @@ Basta fazer `ls` e ficas a saber o que está dentro da pasta atual:
 
 ### Argumentos
 
-Os comandos podem receber argumentos, que são separados por espaços, e normalmente servem para
+Os comandos podem receber argumentos, que **são separados por espaços**, e normalmente servem para
   indicar onde ou em que coisa é que queres executar o comando.
 Para usares argumentos, basta po-los à frente do comando.
 
@@ -198,15 +198,74 @@ Por exemplo, se fizeres `man 3 stdio`, o `man` vai-te dar informação sobre a b
 
 ## `mkdir`
 
+Como vais precisar de um sítio para guardares os programas que vais fazer durante a faculdade, vamos
+  criar uma pasta para eles.
+Podemos criar pastas com o comando `mkdir` (**M**a**K**e **DIR**ectory).
+
+Para criar uma pasta chamada "Projetos", faz `mkdir Projetos`.
+Podes usar o `ls` para verificar que o comando funcionou:
+![mkdir](./img/term07.png)
+
 ### Espaços no terminal
+
+Lembras-te quando falamos sobre os [espaços serem usados para separar argumentos](#argumentos)?
+Isso causa problemas se tentares criar uma pasta com espaços.
+
+Experimenta criar uma pasta chamada "Uma Pasta" com `mkdir Uma Pasta`.
+Se fizeres `ls`, vais ver que foram criadas duas pastas, uma chamada "Uma", e outra chamada "Pasta".
+A shell divide os argumentos usando os espaços, por isso para ela "Uma" é um argumento e "Pasta" é
+  outro, e o `mkdir` por consequência cria duas pastas, porque recebeu dois argumentos.
+
+Para resolver este problema podes usar aspas para definir algo com espaços como um único argumento,
+  ou seja, fazer `mkdir "Uma Pasta"`.
+
+<details>
+  <summary>CURIOSIDADE: Alternativa às aspas</summary>
+  Em vez de <code>"Uma Pasta"</code>, podes fazer <code>Uma\ Pasta</code>.
+  A diferença é que em vez de usar àspas, podes usar o <i>escape character</i> <code>\</code>, que
+    permite <b>escapar</b> a função especial de carateres.
+  Como o <code>\</code> é um carater para escapar funçionalidades, se o quiseres usar de forma
+    literal, têns que o escapar fazendo <code>\\</code>.
+</details>
+
+## `rmdir`
+
+O contrário do criar pastas com `mkdir` é remove-las com o `rmdir` (**R**e**M**ove **DIR**rectory).
+
+Tal como o `mkdir` e maior parte dos outros comandos, o `rmdir` aceita mais que um argumento, por
+  isso podemos remover as pastas todas que acabamos de criar (exceto a "Projetos") com um só
+  comando: `rmdir "Uma Pasta" Uma Pasta`:
+![rmdir](./img/term08.png)
+
+Atenção que o `rmdir` só consegue apagar pastas vazias.
+Se a pasta tiver alguma coisa lá dentro o comando vai-se queixar.
 
 ## `cd`
 
+Já temos uma pasta para os teus projetos criada, agora falta saber entrar lá.
+Para isso podemos usar o `cd` (**C**hange **D**irectory).
+
+Provalvemente já estás a imaginar como é que o comando funciona: <code>cd <b>[pasta]</b></code>.
+Faz `cd Projetos`:
+![cd](./img/term09.png)
+
 ## `clear`
 
-O comando `clear` é a instrução usada para "limpar" o terminal sem ter de fechar a sessão atual. Intuitivamente, elimina do ecrã todo o texto deixando o terminal limpo para novas instruções. Isto pode ser útil, uma vez que ao programares vais-te deparar muitas vezes com o terminal cheio de conteúdo que já não tem interesse. Ao fazeres `clear` limpas o que está a encher-te o ecrã e ajuda-te a focar no que estás a fazer de momento.
+O teu terminal provavelmente já está cheio de texto que já não te interessa.
+Para limpares o terminal podes usar o comando `clear`.
 
-É do teu interesse decorares o comando *Ctrl + D* porque no terminal tem exatamente o mesmo efeito que escreveres `clear`. Assim, sempre que terminares um exercício ou tiveres um output muito extenso podes só dar *Ctrl + D* e é como o Cilit BANG, a sujidade desaparece.
+Este comando é útil especialmente nestes casos em que o output que tens no terminal é tanto que
+  torna difícil de ler o que está lá.
+
+### Ctrl + L
+
+Podes ser ainda mais rápido usando a combinação de teclas **Ctrl + L**, que acaba por fazer
+  práticamente o mesmo que o `clear`.
+
+Há só uma pequena diferença entre o dois.
+Se fizeres `clear`, o texto que estava no terminal é realmente removido.
+Se fizeres **Ctrl + L**, o texto é movido para cima, mas se fizeres scroll consegues voltar a ver o
+  texto que estava antes (ou pelo menos parte dele, depende da shell).
 
 ## `touch`
 
@@ -223,8 +282,6 @@ irá criar os 3 ficheiros vazios.
 O touch à primeira vista pode não parecer útil para além de criar ficheiros para os editar, mas uma técnica bastante conhecida de organização de pastas é deixar marcadores. Estes marcadores podem ser representados por ficheiros vazios. Por exemplo, no caso de teres uma pasta com inúmeros exercícios de Python de várias fichas. Se não os quiseres dividir por pastas podes criar 
 ```touch ficha1.txt ficha2.txt ficha3.txt ```shell 
 e assim os exercícios ficam divididos pelos ficheiros de texto.
-
-## `rmdir`
 
 ## `rm`
 
@@ -263,3 +320,7 @@ e assim os exercícios ficam divididos pelos ficheiros de texto.
 ### `&&`, `||`, e `;`
 
 ## `kill`
+
+## `exit`
+
+### **Ctrl + D**
