@@ -242,22 +242,30 @@ Se a pasta tiver alguma coisa lá dentro o comando vai-se queixar.
 
 ## `cd`
 
+Já temos uma pasta para os teus projetos criada, agora falta saber entrar lá.
+Para isso podemos usar o `cd` (**C**hange **D**irectory).
+
+Provalvemente já estás a imaginar como é que o comando funciona: <code>cd <b>[pasta]</b></code>.
+Faz `cd Projetos`:
+![cd](./img/term09.png)
+
 ## `clear`
 
-O comando `clear` é usado para "limpar" o terminal sem teres que fechar a sessão atual.
-Intuitivamente, ele elimina do ecrã todo o texto deixando o terminal limpo para novas instruções.
-Isto pode ser útil, uma vez que ao usares o terminal vais-te deparar muitas vezes com imenso
-  conteúdo que já não te tem interesse.
+O teu terminal provavelmente já está cheio de texto que já não te interessa.
+Para limpares o terminal podes usar o comando `clear`.
+
+Este comando é útil especialmente nestes casos em que o output que tens no terminal é tanto que
+  torna difícil de ler o que está lá.
 
 ### Ctrl + L
 
 Podes ser ainda mais rápido usando a combinação de teclas **Ctrl + L**, que acaba por fazer
   práticamente o mesmo que o `clear`.
 
-Há uma pequena diferença entre o dois.
+Há só uma pequena diferença entre o dois.
 Se fizeres `clear`, o texto que estava no terminal é realmente removido.
 Se fizeres **Ctrl + L**, o texto é movido para cima, mas se fizeres scroll consegues voltar a ver o
-  texto que estava antes.
+  texto que estava antes (ou pelo menos parte dele, depende da shell).
 
 ## `touch`
 
