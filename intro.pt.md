@@ -269,6 +269,20 @@ Se fizeres **Ctrl + L**, o texto é movido para cima, mas se fizeres scroll cons
 
 ## `touch`
 
+O comando `touch` é usado para criar ficheiros vazios ou atualizar a timestamp dos ficheiros já existentes.
+
+Se correres por exemplo: 
+```touch foo.txt```shell 
+ele irá criar o ficheiro "foo.txt" vazio no caso de não existir, se já existir atualiza a timestamp sem *tocar* no conteúdo.
+
+Este comando também tem a capacidade de produzir vários ficheiros em grupo. Se fizeres:
+```touch foo1.txt foo2.txt foo3.txt```shell 
+irá criar os 3 ficheiros vazios. 
+
+O touch à primeira vista pode não parecer útil para além de criar ficheiros para os editar, mas uma técnica bastante conhecida de organização de pastas é deixar marcadores. Estes marcadores podem ser representados por ficheiros vazios. Por exemplo, no caso de teres uma pasta com inúmeros exercícios de Python de várias fichas. Se não os quiseres dividir por pastas podes criar 
+```touch ficha1.txt ficha2.txt ficha3.txt ```shell 
+e assim os exercícios ficam divididos pelos ficheiros de texto.
+
 ## `rm`
 
 ### Perigos do `rm`
