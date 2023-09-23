@@ -223,10 +223,10 @@ Estas pastas ainda podem parecer um bocado esquisitas, mas acredita, vais usá-l
 
 ## Operadores
 
-### Pipes
-
-### `&&`, `||`, e `;`
+### `|`
 
 ### `&`
 
-#### `kill`
+### `&&`, `||`, e `;`
+
+## `kill`
