@@ -300,7 +300,12 @@ Deixamos aqui 2 exemplos de opções que te podem ser úteis:
 
 - `-a`: usado para quando queres preservar as propriedades dos ficheiros (como permissão de execução)
 
-Uma nota: quando quiseres copiar tem atenção a escrever o caminho correto pois podes cometer erros facilmente ou o comando simplemsnete não funcionar se não detetar a fonte que queres copiar.
+
+Exemplo de execução:
+Por exemplo se quiseres copiar todos os ficheiros de python para uma pasta podes escrever
+```cp -i *.py Documents/fichasAPT```shell
+
+Uma nota: quando quiseres copiar tem atenção a escrever o caminho correto pois podes cometer erros facilmente ou o comando simplemsnete não funcionar se não detetar a fonte que queres copiar. 
 
 ## `mv`
 
