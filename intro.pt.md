@@ -18,7 +18,7 @@ Nalgums chama-se **Gnome Terminal**, noutros **Konsole**, e noutros outra coisa 
 Na realidade temos dois programas a correr aqui.
 Primeiro temos o terminal em si, que trata só da parte gráfica, como por exemplo o tipo de letra e
   tamanho da janela.
-O segundo programa é uma **shell**, e está a correr dentro do terminal.
+O segundo programa é a **shell**, e está a correr dentro do terminal.
 A shell é o programa que dá output do texto (incluindo o que aparece ao iniciar o terminal), e lê,
   interpreta, e executa os comandos que lhe dás.
 
@@ -61,11 +61,12 @@ Vamos então começar com comandos.
 
 O primeiro comando que vamos ver é bastante simples, e chama-se `pwd` (**P**rint **W**orking
   **D**irectory).
-Experimenta correr o comando, vais ter um output do género:
+Experimenta correr o comando.
+Escreve `pwd` e carrega _Enter_, vais ter um output do género:
 ![pwd command](./img/term01.png)
 
 No teu caso a pasta deve ter um nome diferente por causa do nome to teu utilizador, mas também deve
-  estar dentro da pasta `/home/`, que é a pasta onde as pastas pessoais costumam ficar.
+  estar dentro da pasta `/home`, que é a pasta onde as pastas pessoais costumam ficar.
 
 O `pwd` é raramente usado, não por ser um comando bastante simples, mas porque a informação que ele
   dá já está disponível no prompt.
@@ -97,13 +98,90 @@ Experimenta fazer isto em mais pastas, ou se quiseres, podes passar já para o p
 
 ## `ls`
 
-### Flags
+O próximo comando que vamos ver é o `ls` (**L**i**S**t), que serve para listar o conteúdo de pastas.
 
-#### Ficheiros Escondidos
+Basta fazer `ls` e ficas a saber o que está dentro da pasta atual:
+![output ls](./img/term03.png)
+
+### Argumentos
+
+Os comandos podem receber argumentos, que são separados por espaços, e normalmente servem para
+  indicar onde ou em que coisa é que queres executar o comando.
+Para usares argumentos, basta po-los à frente do comando.
+
+No caso do `ls`, os argumentos que ele espera são pastas, para quando quiseres ver o conteúdo duma
+  pasta estando noutra.
+
+Experimenta fazer `ls /` (a pasta `/` é a pasta pai de todas as outras, uma espécie de `C:\` do
+  Linux):
+![ls root](./img/term04.png)
+
+### Caminhos
+
+Para usar o `ls` noutra pasta, tens que indicar o caminho dessa pasta, e existem dois tipos de
+  caminhos, **absolutos** e **relativos**.
+
+Os caminhos absolutos são caminhos que começam por `/` (a pasta pai que acabamos de ver), enquanto
+  que os caminhos relativos não, e são relativos à pasta atual em que estás.
+
+Por exemplo, eu estando na minha pasta pessoal, que no meu caso o caminho absoluto é `/home/carlos`,
+  para listar o conteúdo da pasta de documentos, posso usar o caminho absoluto e fazer
+  `ls /home/carlos/Documents`, ou entao posso usar o caminho relativo e fazer `ls Documents`.
+
+#### Flags
+
+Existe um tipo especial de argumentos, chamados de flags.
+As flags servem para alterar o funcionamento dos comandos, e cada comando tem as suas flags, não são
+  coisas que todos os comandos partilham.
+
+Existem flags curtas, que começam por `-`, e flags longas, que começam por `--`.
+Normalmente, as flags curtas são compostas por um carater (por exemplo `-i`), e as flags longas são
+  compostas por palavras (por exemplo `--ignore-case`).
+Quase sempre, cada flag curta tem uma flag longa correspondente, mas o oposto já não é tão comum.
+
+Muitos programas também aceitam juntar flags curtas numa só para não ocuparem tanto espaço.
+Por exemplo, no comando `ls` que estamos a ver, as flags `-A -l -h` podem ser escritas como `-Alh`.
+
+Flags também podem receber argumentos.
+Nas flags curtas os argumentos costumam ser separados por um espaço (por exemplo `-f fich.txt`), e
+  nas flags longas costumam ser separados por um `=` (por exemplo `--file=fich.txt`).
+
+### Ficheiros Escondidos
+
+Com isto, vamos usar flags para mudar o comportamento do `ls`.
+Por predefinição o `ls` só mostra os ficheiros e pastas normais, mas também existem ficheiros e
+  pastas escondidos.
+Estes são os que têm o nome a começar por `.`.
+
+Para podermos listar o conteúdo todo de uma pasta, incluindo o que está escondido, podemos usar a
+  flag `-a` (ou `--all` que é o equivalente na forma longa):
+![ls hidden](./img/term05.png)
+
+#### Pseudo-Pastas
+
+Deves ter reparado no último screenshot que apareceram duas pastas com uns nomes que não parecem
+  fazer muito sentido: `.` e `..`.
+Estas são na realidade pseudo-pastas, e existem em todas as pastas, mesmo as que estão vazias.
+
+`.` é a pasta atual, ou seja, se fizeres `ls .` recebes o mesmo output que se fizeres só `ls`.
+Esta pseudo-pasta serve na maioria do casos para correr um ficheiro executavél que está na pasta
+  atual.
+Já agora, praticamente todos os comandos neste guia são ficheiro executáveis também, mas estão em
+  pastas especiais que os pertime serem executados a partir de qualquer pasta.
+
+A pasta `..` é a pasta pai, ou seja, se eu estiver na pasta `/home/carlos`, fazer `ls ..` vai-me
+  mostrar o conteúdo da pasta `/home`.
+Também podes usar `..` várias vezes no mesmo caminho.
+Seguindo o exemplo anterior em que estou na minha pasta pessoal, se eu fizer `ls ../..`, vou receber
+  o conteúdo da pasta `/`.
+
+Estas pastas ainda podem parecer um bocado esquisitas, mas acredita, vais usá-las imenso.
 
 ## `man`
 
 ## `mkdir`
+
+### Espaços no terminal
 
 ## `cd`
 
