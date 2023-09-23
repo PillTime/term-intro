@@ -269,23 +269,41 @@ Se fizeres **Ctrl + L**, o texto é movido para cima, mas se fizeres scroll cons
 
 ## `touch`
 
-O comando `touch` é usado para criar ficheiros vazios ou atualizar a timestamp dos ficheiros já existentes.
+Podes agora criar um ficheiro novo vazio com `touch`.
+Experimenta fazer `touch ola.txt`:
+![touch](./img/term10.png)
 
-Se correres por exemplo: 
-```touch foo.txt```shell 
-ele irá criar o ficheiro "foo.txt" vazio no caso de não existir, se já existir atualiza a timestamp sem *tocar* no conteúdo.
+Se fizeres `touch` num ficheiro que já existe, o comando atualiza o timestamp de modificação do
+  ficheiro.
 
 Este comando também tem a capacidade de produzir vários ficheiros em grupo. Se fizeres:
-```touch foo1.txt foo2.txt foo3.txt```shell 
-irá criar os 3 ficheiros vazios. 
 
-O touch à primeira vista pode não parecer útil para além de criar ficheiros para os editar, mas uma técnica bastante conhecida de organização de pastas é deixar marcadores. Estes marcadores podem ser representados por ficheiros vazios. Por exemplo, no caso de teres uma pasta com inúmeros exercícios de Python de várias fichas. Se não os quiseres dividir por pastas podes criar 
-```touch ficha1.txt ficha2.txt ficha3.txt ```shell 
-e assim os exercícios ficam divididos pelos ficheiros de texto.
+O touch à primeira vista pode não parecer muito útil para além de criar ficheiros para os editar,
+  mas uma técnica bastante conhecida de organização de pastas é deixar marcadores.
+Estes marcadores podem ser representados por ficheiros vazios.
+
+Por exemplo, no caso de teres uma pasta com inúmeros exercícios de Python de várias fichas, se não
+  os quiseres dividir por pastas podes fazer `touch ficha1.py ficha2.py ficha3.py`, e assim os
+  exercícios ficam já divididos pelos ficheiros.
+
+Além disso, quando usares `git` e quiseres guardar uma pasta vazia num repositório, vais ter que
+  incluir um ficheiro vazio lá, como por exemplo `.gitkeep`, porque o `git` não aceita pastas
+  vazias.
 
 ## `rm`
 
+Para se opor ao `touch`, temos o `rm` (**R**e**M**ove).
+
+Usa `rm ola.txt` para remove o ficheiro que criaste:
+![rm](./img/term11.png)
+
+Também podes usar o `rm` para remove pastas não vazias usando a flag `-r`.
+
 ### Perigos do `rm`
+
+O `rm` é um comando um bocado perigoso, porque os ficheiros que lhe são passados não vão para uma
+  pasta de reciclagem.
+São eliminados de imediato.
 
 ## `cp`
 
@@ -298,6 +316,10 @@ e assim os exercícios ficam divididos pelos ficheiros de texto.
 ## `cat`
 
 ## `less`
+
+## `head`
+
+## `tail`
 
 ## `grep`
 
@@ -318,6 +340,8 @@ e assim os exercícios ficam divididos pelos ficheiros de texto.
 ### `&`
 
 ### `&&`, `||`, e `;`
+
+### `*`
 
 ## `kill`
 
