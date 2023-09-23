@@ -22,14 +22,14 @@ O segundo programa é uma **shell**, e está a correr dentro do terminal.
 A shell é o programa que dá output do texto (incluindo o que aparece ao iniciar o terminal), e lê,
   interpreta, e executa os comandos que lhe dás.
 
-_**<span style="font-size:large">Basicamente, o cérebro do terminal é a shell.</span>**_
+_**Basicamente, o cérebro do terminal é a shell.**_
 
 Existem várias shells, mas quase todas as distribuições usam a mesma por predefinição: **`bash`**.
 
 <details>
   <summary>Nota sobre o nome <b>terminal</b></summary>
   Na realidade um terminal é o ecrã preto que (possivelmente) aparece quando ligas o computador.
-  A "terminal" que estamos a usar é um <b>emulador de terminal</b>, mas não vale a pena estar a ser
+  O "terminal" que estamos a usar é um <b>emulador de terminal</b>, mas não vale a pena estar a ser
     tão pedante.
 </details>
 
