@@ -128,7 +128,7 @@ Por exemplo, eu estando na minha pasta pessoal, que no meu caso o caminho absolu
   para listar o conteúdo da pasta de documentos, posso usar o caminho absoluto e fazer
   `ls /home/carlos/Documents`, ou entao posso usar o caminho relativo e fazer `ls Documents`.
 
-#### Flags
+### Flags
 
 Existe um tipo especial de argumentos, chamados de flags.
 As flags servem para alterar o funcionamento dos comandos, e cada comando tem as suas flags, não são
@@ -157,7 +157,7 @@ Para podermos listar o conteúdo todo de uma pasta, incluindo o que está escond
   flag `-a` (ou `--all` que é o equivalente na forma longa):
 ![ls hidden](./img/term05.png)
 
-#### Pseudo-Pastas
+### Pseudo-Pastas
 
 Deves ter reparado no último screenshot que apareceram duas pastas com uns nomes que não parecem
   fazer muito sentido: `.` e `..`.
