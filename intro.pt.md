@@ -237,8 +237,8 @@ Tal como o `mkdir` e maior parte dos outros comandos, o `rmdir` aceita mais que 
   comando: `rmdir "Uma Pasta" Uma Pasta`:
 ![rmdir](./img/term08.png)
 
-Atenção que o `rmdir` só consegue apagar pastas vazias. Se a pasta tiver alguma coisa lá dentro o
-  comando vai-se queixar.
+Atenção que o `rmdir` só consegue apagar pastas vazias.
+Se a pasta tiver alguma coisa lá dentro o comando vai-se queixar.
 
 ## `cd`
 
