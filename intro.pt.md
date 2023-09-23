@@ -27,7 +27,7 @@ _**Basicamente, o cérebro do terminal é a shell.**_
 Existem várias shells, mas quase todas as distribuições usam a mesma por predefinição: **`bash`**.
 
 <details>
-  <summary>Nota sobre o nome <b>terminal</b></summary>
+  <summary>NOTA: Acerca do nome <b>terminal</b></summary>
   Na realidade um terminal é o ecrã preto que (possivelmente) aparece quando ligas o computador.
   O "terminal" que estamos a usar é um <b>emulador de terminal</b>, mas não vale a pena estar a ser
     tão pedante.
@@ -56,6 +56,44 @@ Normalmente as shells estão configuradas para mostrar `#` quando estamos com o 
   que no Linux é o utilizador que serve de administrador, com acesso total ao sistema.
 
 ## `pwd`
+
+Vamos então começar com comandos.
+
+O primeiro comando que vamos ver é bastante simples, e chama-se `pwd` (**P**rint **W**orking
+  **D**irectory).
+Experimenta correr o comando, vais ter um output do género:
+![pwd command](./img/term01.png)
+
+No teu caso a pasta deve ter um nome diferente por causa do nome to teu utilizador, mas também deve
+  estar dentro da pasta `/home/`, que é a pasta onde as pastas pessoais costumam ficar.
+
+O `pwd` é raramente usado, não por ser um comando bastante simples, mas porque a informação que ele
+  dá já está disponível no prompt.
+Experimenta abrir o teu explorador de ficheiros e carregar com o botão direito do rato numa pasta
+  qualquer.
+Deve-te aparecer uma opção do estilo "abrir o terminal aqui" (se não tiveres essa opção, azar):
+![open in terminal option](./img/file00.png)
+
+Carrega nela e executa `pwd` no terminal que te aparece:
+![pwd in other folder](./img/term02.png)
+
+Experimenta fazer isto em mais pastas, ou se quiseres, podes passar já para o próximo comando.
+
+<details>
+  <summary>CURIOSIDADE: Diferença entre <b>pastas</b> e <b>diretórios</b></summary>
+  Não há realmente uma diferença entre os dois termos.
+  "Diretório" era o termo usado antigamente, e com o surgimento de GUIs, o nome "pasta" começou a
+    ser utilizado.
+
+  Há quem diga que há realmente uma diferença, e até podem ter alguma razão (aceito
+    [este](https://retrocomputing.stackexchange.com/a/26176) argumento), mas há dois casos que não
+    tem razão absolutamente nenhuma:
+  <ul>
+    <li>Se disserem que "diretório" é o quando usas o terminal e "pasta" é o quando usas GUI.</li>
+    <li>Se disserem que é "pasta" no Windows e macOS, e "diretório" nos outros SOs.</li>
+  </ul>
+  Esse pessoal tem só problemas na cabeça.
+</details>
 
 ## `ls`
 
