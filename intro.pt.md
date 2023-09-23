@@ -244,10 +244,20 @@ Atenção que o `rmdir` só consegue apagar pastas vazias. Se a pasta tiver algu
 
 ## `clear`
 
-O comando `clear` é a instrução usada para "limpar" o terminal sem ter de fechar a sessão atual. Intuitivamente, elimina do ecrã todo o texto deixando o terminal limpo para novas instruções. Isto pode ser útil, uma vez que ao programares vais-te deparar muitas vezes com o terminal cheio de conteúdo que já não tem interesse. Ao fazeres `clear` limpas o que está a encher-te o ecrã e ajuda-te a focar no que estás a fazer de momento.
+O comando `clear` é usado para "limpar" o terminal sem teres que fechar a sessão atual.
+Intuitivamente, ele elimina do ecrã todo o texto deixando o terminal limpo para novas instruções.
+Isto pode ser útil, uma vez que ao usares o terminal vais-te deparar muitas vezes com imenso
+  conteúdo que já não te tem interesse.
 
-É do teu interesse decorares o comando *Ctrl + D* porque no terminal tem exatamente o mesmo efeito que escreveres `clear`. Assim, sempre que terminares um exercício ou tiveres um output muito extenso podes só dar *Ctrl + D* e é como o Cilit BANG, a sujidade desaparece.
+### Ctrl + L
 
+Podes ser ainda mais rápido usando a combinação de teclas **Ctrl + L**, que acaba por fazer
+  práticamente o mesmo que o `clear`.
+
+Há uma pequena diferença entre o dois.
+Se fizeres `clear`, o texto que estava no terminal é realmente removido.
+Se fizeres **Ctrl + L**, o texto é movido para cima, mas se fizeres scroll consegues voltar a ver o
+  texto que estava antes.
 
 ## `touch`
 
@@ -288,3 +298,7 @@ O comando `clear` é a instrução usada para "limpar" o terminal sem ter de fec
 ### `&&`, `||`, e `;`
 
 ## `kill`
+
+## `exit`
+
+### **Ctrl + D**
