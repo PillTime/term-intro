@@ -336,7 +336,42 @@ No caso de mover pastas, ao contrário do `cp` não precisas de flag nenhuma.
 
 ## `echo`
 
+O `echo` é um comando bastante simples.
+Os argumentos que lhe dás, ele dá output separados por um espaço:
+![echo](./img/echo.png)
+
+Pode parecer um comando bastante inútil, mas váis ver já a seguir e também mais à frente que às
+  vezes dá bastante jeito.
+
 ### Variáveis de Ambiente
+
+No Linux (e no Windows também, mas mais escondido) existem **variáveis de ambiente**.
+As variáveis de ambiente são variáveis que o sistema operativo e os programas usam para saber o
+  estado do sistema e definir comportamentos apropriados.
+
+Por exemplo, lembras-te de eu ter dito na secção de [pseudo-pastas](#pseudo-pastas) que maior parte
+  destes comandos são executáveis que estão em pastas especiais, que os permite serem executados a
+  partir de qualquer pasta?
+Estas pastas especiais são definidas por uma variável de ambiente chamada `PATH`.
+
+Para veres o valor que estas variáveis guardam podes usar o `echo` e por um `$` antes do nome da
+  variável.
+Por exemplo, `echo $PATH`:
+![echopath](./img/echopath.png)
+
+### `env`
+
+Também existe o comando `env`, que mostra todas as variáveis de ambiente presentes na sessão e os
+  seus valores:
+![env](./img/env)
+
+Pode parecer que com o `env` o `echo` já perdeu a sua utilidade, mas com o `env` não consegues
+  fazer `echo Chamo-me $USER e estou a usar a shell $SHELL.`:
+![echotrick](./img/echotrick.png)
+
+Este tipo de uso é bastante comum em scripts que precisam de dar informação ao utilizador.
+
+E há mais coisas em que o `echo` dá jeito, mas vou falar delas mais à frente.
 
 ## `cat`
 
@@ -371,6 +406,8 @@ A realidade é que o `cat` serve para concatenar o conteúdo de vários ficheiro
 ### explainshell.com
 
 ## Operadores
+
+### `>` e `2>`
 
 ### `|`
 
