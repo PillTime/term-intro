@@ -606,4 +606,12 @@ Se um processo não estiver a responder e o `kill` não funcionar, podes usar a 
 
 ## `exit`
 
+O comando `exit` é bastante simples, e serve apenas para terminar a sessão atual do terminal.
+
 ### **Ctrl + D**
+
+Tal como o `clear`, o `exit` pode ser trocado por _Ctrl + D_.
+
+No entanto o _Ctrl + D_ também serve do carater **EOF** (end of file).
+Por exemplo, se fizeres `cat > fich.txt`, o `cat` fica à espera do teu input, e
+  só termina quando receber um **EOF**.
