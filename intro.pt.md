@@ -196,6 +196,10 @@ Além de comandos, o `man` também pode ser usado para mostrar informação sobr
 Por exemplo, se fizeres `man 3 stdio`, o `man` vai-te dar informação sobre a biblioteca `stdio` do
   C (o `3` indica a secção onde o `man` vai buscar a informação (lê o `man man`)).
 
+Faz `man` com os comandos que vais aprendendo.
+Este guia só introduz cada comando, mas com `man` ficas a perceber melhor o que cada comando faz, e
+  até pode ser que encontres flags que te dêm jeito para alguns comandos.
+
 ## `mkdir`
 
 Como vais precisar de um sítio para guardares os programas que vais fazer durante a faculdade, vamos
