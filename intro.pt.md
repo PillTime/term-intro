@@ -429,13 +429,73 @@ Podes também usar a flag `-n` para também teres o número das linhas que apare
 
 ## `sudo`
 
-### Perigos do `sudo`
+Se precisares de fazer `cp` ou `mv` a ficheiros que não estejam na tua pasta pessoal, vais ser
+  parado pela shell por não teres permissões suficientes, porque os ficheiros fora da tua pasta
+  pessoal pertencem ao sistema, e não a ti.
+
+Para conseguires alterar os ficheiros do sistema, podes usar o `sudo` (**SU**peruser **DO**):
+![sudo](./img/sudo.png)
 
 ### Instalação de Aplicações
 
+Quando precisares de instalar aplicações, vais ter de usar, ou a loja de aplicações da tua
+  distribuição, ou o terminal.
+Antigamente era tudo pelo terminal, mas agora o normal é instalar aplicações com interfaces gráficas
+  pela loja de aplicações, e o resto (aplicações de terminal e bibliotecas) pelo terminal.
+
+Como as aplicações são instaladas fora da tua pasta local, para as instalares precisas de usar
+  `sudo`.
+Os comandos para instalar aplicações e bibliotecas são:
+ - Debian/Ubuntu e derivados: <code>sudo apt install <b>[aplicação/biblioteca]</b></code>.
+ - RedHat/Fedora e derivados: <code>sudo dnf install <b>[aplicação/biblioteca]</b></code>.
+ - Arch Linux e derivados: <code>sudo pacman -S <b>[aplicação/biblioteca]</b></code>.
+
+Como para todos os outros comandos, usa o `man` para saberes mais sobre cada um.
+
+### Perigos do `sudo`
+
+O `sudo` é outro comando bastante perigoso, e deve ser mais óbvio o porquê do que foi para o `rm`.
+
+**Com `sudo` tens acesso ao sistema inteiro.**
+Basta uma alteração errada num ficheiro do sistema e podes fazer com que o teu computador deixe de
+iniciar.
+
+Usa o `sudo` apenas quando precisas mesmo.
+
 ## Perigos de Comandos na Internet
 
+O que acabei de dizer para o `sudo` também se aplica aos comandos que te aparecem na Internet, até
+  porque grande parte deles usa `sudo`.
+
+Se não sabes o que um comando faz, não o executes, mesmo que não tenha `sudo`.
+Vou dar três exemplo de comandos que aparecem de vez em quando e que são perigosos.
+
+O primeiro é `sudo rm --rf /`.
+Este vem já com `sudo` e `rm`, dois comandos perigosos juntos.
+Este comando apaga o sistema inteiro, o equivalente a fazer _Shift + Del_ ao `C:\` no Windows.
+Em alguns sistemas também é necessária a flag `--no-preserve-root` para o comando executar, mas
+  vai haver sempre alguem que o vai executar, mesmo com o texto do comando a ser suspeito.
+
+O segundo é `:(){ :|:& };:`.
+Este não tem `sudo` nem `rm`, mas não dá para perceber o que faz.
+Este comando é um _[fork bomb](https://en.wikipedia.org/wiki/Fork_bomb)_, e basicamente duplica-se a
+  si mesmo até a RAM do computador ficar cheia, obrigando o utilizador a desligar o computador, e
+  perder tudo o que estava por gravar.
+
+O terceiro é `| aplay -`.
+Este já não é tão comum de se ver, mas aparece de vez em quando.
+Este comando executa o `aplay`, que serve para tocar ficheiros de áudio, mas troca o ficheiro pelo
+  output `cat /dev/urandom`.
+Isto acaba por tocar ruído nas colunas ou headphones no volume máximo.
+Não é perigoso para o sistema, mas pode dar um ataque-cardiaco pelo susto.
+
 ### explainshell.com
+
+Existe um site que ajuda a perceber o que cada comando faz, chamado
+  [explainshell.com](https://explainshell.com/).
+
+Não é perfeito, mas ajuda, especialmente para comandos simples que alguém que está a aprender a usar
+  o terminal usa.
 
 ## Operadores
 
@@ -447,9 +507,9 @@ Podes também usar a flag `-n` para também teres o número das linhas que apare
 
 ### `|`
 
-O operador pipe, representado pela barra vertical `|`, é um conceito fundamental que mais vais ver em exercícios de shell. Ele permite-te o encadear inputs e outputs de vários comandos, isto é, o output de um comando é usado como input para outro. 
+O operador pipe, representado pela barra vertical `|`, é um conceito fundamental que mais vais ver em exercícios de shell. Ele permite-te o encadear inputs e outputs de vários comandos, isto é, o output de um comando é usado como input para outro.
 
-Se quiseres ver os ficheiros de texto num diretório podes escrever `ls -l | grep *.txt`. Se fizeres só o `ls -l` o terminal lista-te os itens para o ecrã (stdout) mas como tens um pipe entre os comandos a lista resultante do `ls -l` será o input do `grep *.txt`.  
+Se quiseres ver os ficheiros de texto num diretório podes escrever `ls -l | grep *.txt`. Se fizeres só o `ls -l` o terminal lista-te os itens para o ecrã (stdout) mas como tens um pipe entre os comandos a lista resultante do `ls -l` será o input do `grep *.txt`.
 
 Outro exemplo útil é procurar se um dado processo está a ocorrer em background, podes fazer `ps -ef | grep <nome do processo>`. Em princípo ele vai-te dar dois resultados com este comando, o processo que estás à procura e o comando que acabaate de introduzir uma vez que cada comando que inseres no terminal abre um novo processo!
 
