@@ -13,7 +13,7 @@ Dependendo da distribuição Linux que estás a usar, o terminal pode ter nomes 
 Nalgums chama-se **Gnome Terminal**, noutros **Konsole**, e noutros outra coisa qualquer, mas se
   procurares simplesmente por **`terminal`** deve-te aparecer a aplicação correta, que vai ter mais
   ou menos este aspeto:
-![empty terminal](./img/term00.png)
+![term](./img/term.png)
 
 Na realidade temos dois programas a correr aqui.
 Primeiro temos o terminal em si, que trata só da parte gráfica, como por exemplo o tipo de letra e
