@@ -455,6 +455,14 @@ Outro exemplo útil é procurar se um dado processo está a ocorrer em backgroun
 
 ### `&`
 
+O operador `&`, denominado em inglês como ampersand, é usado para libertar o terminal de algum processo que o deixa em espera ou bloqueado. 
+Desta forma consegue funcionar independentemente das aplicações que arracaram a partir dele. 
+
+Por exemplo, se tiveres o Visual Studio Code instalado podes arrancá-lo a partir do terminal se fizeres `code .`, porém vais reparar que o terminal vai ficar preso e só é libertado quando fechas a janela do VSCode. Aqui entra o `&`, se escreveres `code . &` o terminal abre o VSCode normalmente mas fica livre para receber mais comandos. Isto significa que disseste ao terminal para ele executar o editor de texto mas em background (sem afetar o fluxo do terminal).
+
+Uma nota:
+Se executaste o code em background podes ter reparado que o code agora ficou ligado a essa sessão e por isso se a fechares o code também se desliga. Para que as aplicações que arranquem a partir do terminal e não fiquem ligadas podes usar a palavra `disown`. Se quiseres iniciar então o Code mas independente do terminal onde estás a trabalhar podes escrever: `code . & disown`.
+
 ## `kill`
 
 ## `exit`
