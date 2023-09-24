@@ -415,9 +415,17 @@ Se sabes que a informação que precisas está no início de um ficheiro, podes 
 Para complementar o `head` também tens o `tail`, que te dá as últimas 10 linhas de um ficheiro, caso
   o que precises esteja no fim do ficheiro.
 
-## `tail`
-
 ## `grep`
+
+Continuando com a procura de informação em ficheiros, se a tua situação é a pior de todas e não
+  sabes onde está o que procuras, podes usar o `grep`.
+
+Para usares o `grep` podes fazer <code>grep <b>[padrão]</b> <b>[ficheiro]</b></code>, e ele
+  mostra-te as linhas que têm esse **padrão**:
+![grep](./img/grep.png)
+
+Podes também usar a flag `-n` para também teres o número das linhas que aparecem, e `-i` para o
+  `grep` parar de distinguir entre letras maiúsculas e minúsculas.
 
 ## `sudo`
 
