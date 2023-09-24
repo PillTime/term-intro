@@ -441,13 +441,13 @@ Podes também usar a flag `-n` para também teres o número das linhas que apare
 
 ### `>` e `2>`
 
-### `|`
-
-### `&`
-
 ### `&&`, `||`, e `;`
 
 ### `*`
+
+### `|`
+
+### `&`
 
 ## `kill`
 
