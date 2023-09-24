@@ -447,6 +447,12 @@ Podes também usar a flag `-n` para também teres o número das linhas que apare
 
 ### `|`
 
+O operador pipe, representado pela barra vertical `|`, é um conceito fundamental que mais vais ver em exercícios de shell. Ele permite-te o encadear inputs e outputs de vários comandos, isto é, o output de um comando é usado como input para outro. 
+
+Se quiseres ver os ficheiros de texto num diretório podes escrever `ls -l | grep *.txt`. Se fizeres só o `ls -l` o terminal lista-te os itens para o ecrã (stdout) mas como tens um pipe entre os comandos a lista resultante do `ls -l` será o input do `grep *.txt`.  
+
+Outro exemplo útil é procurar se um dado processo está a ocorrer em background, podes fazer `ps -ef | grep <nome do processo>`. Em princípo ele vai-te dar dois resultados com este comando, o processo que estás à procura e o comando que acabaate de introduzir uma vez que cada comando que inseres no terminal abre um novo processo!
+
 ### `&`
 
 ## `kill`
