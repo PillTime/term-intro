@@ -575,13 +575,17 @@ Com estes dois ajustes, o comando do "Visual Studio Code fica assim: `code . > /
 
 ## `kill`
 
-O comando `kill` é usado para enviar signals a processos que estejam a ocorrer que em príncipio são signals de terminação. Sempre que precisares de "matar um processo" tens de usar este comando. Ele para terminar um processo precisa de saber o PID (ID do processo). É um dos comandos mais intuitivos mas tem algumas flags de notar:
+O comando `kill` é usado para enviar signals a processos que estejam a ocorrer.
+Este sinais servem para avisar os processos que devem fazer algo.
 
-- `-l`: lista os signals diferentes e os seus números
+Por predefinição o `kill` manda aos processos um **SIGTERM**, que indica aos processos que devem
+  terminar a execução (dai o nome `kill`).
 
-- `-9` ou `SIGKILL`: envia um signal de kill para forçar a terminação de um processo mesmo quando aquela aplicação mais chata não desliga o `-9` mata-o >:)
+O comando usa-se com o **ID** do processo, algo que é mostrado quando fazes `&`:
+![kill](./img/kill)
 
-- `-INT`: envia um signal de terminação mas não força, é o equivalente a clicares "Ctrl + C". Permite que o processo termine as suas operações de forma normal. É a forma recomendada de desligar um processo.
+Se um processo não estiver a responder e o `kill` não funcionar, podes usar a flag `-9` para mandar
+  um **SIGKILL**, que faz com que o sistema operativo force a terminação do processo.
 
 ## `exit`
 
