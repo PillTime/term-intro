@@ -548,13 +548,30 @@ Outros usos comuns do `|` são com o `ls` para encontrar informação sobre fich
 
 ### `&`
 
-O operador `&`, denominado em inglês como ampersand, é usado para libertar o terminal de algum processo que o deixa em espera ou bloqueado. 
-Desta forma consegue funcionar independentemente das aplicações que arracaram a partir dele. 
+O operador `&` (ampersand) é usado para por comandos a correr "por trás" da shell.
+Ou seja, deixa-te correr outros comandos enquanto o que fizeste com o `&` continua a correr sem te
+  prender o terminal.
 
-Por exemplo, se tiveres o Visual Studio Code instalado podes arrancá-lo a partir do terminal se fizeres `code .`, porém vais reparar que o terminal vai ficar preso e só é libertado quando fechas a janela do VSCode. Aqui entra o `&`, se escreveres `code . &` o terminal abre o VSCode normalmente mas fica livre para receber mais comandos. Isto significa que disseste ao terminal para ele executar o editor de texto mas em background (sem afetar o fluxo do terminal).
+Um exemplo é abrir o editor "Visual Studio Code" no terminal com `code .`, algo bastante comum para
+  alterar ficheiros na pasta em que estás.
+O problema é que o terminal fica ocupado com o comando a correr, e só é libertado se fechares o
+  editor de texto.
+O que podes fazer é acrescentar `&` ao fim, ficando `code . &`.
+Assim tens o editor a correr, e consegues ao mesmo tempo executar outros comandos no terminal.
 
-Uma nota:
-Se executaste o code em background podes ter reparado que o code agora ficou ligado a essa sessão e por isso se a fechares o code também se desliga. Para que as aplicações que arranquem a partir do terminal e não fiquem ligadas podes usar a palavra `disown`. Se quiseres iniciar então o Code mas independente do terminal onde estás a trabalhar podes escrever: `code . & disown`.
+Há algo de importante a notar com este último exemplo.
+O comando que executas com `&` contínua a estar ligado ao terminal, ou seja, qualquer output que o
+  comando produza aparece no terminal, mesmo se estiveres a meio de escrever outro.
+Não só isso, se fechares o terminal, qualquer comando que tenhas executado com `&` também é
+  terminado imediatamente.
+Por exemplo, se fizeres `code . &` e depois fechares o terminal, o editor também é fechado.
+
+Se quiseres ignorar o output de comandos executados com o `&`, podes acrescentar `> /dev/null`
+  antes, que mando o output para um ficheiro especial que ignora tudo o que recebe.
+Se quiseres que o comando continue a executar mesmo fechando o terminal, podes acrescentar `disown`
+  ao fim.
+
+Com estes dois ajustes, o comando do "Visual Studio Code fica assim: `code . > /dev/null & disown`.
 
 ## `kill`
 
