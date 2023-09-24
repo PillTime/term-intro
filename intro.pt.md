@@ -527,6 +527,14 @@ Caso queiras acrescentar texto a um ficheiro que já existe, podes usar o `>>` e
 
 ### `*`
 
+O `*` não é bem um operador, é mais um carater especial.
+O `*` "expande-se" para substituir e corresponder a qualquer texto.
+
+Por exemplo, se estiveres na tua pasta pessoal e fizeres `ls *`, ele vai fazer `ls` à tua pasta
+  pessoal (porque `*` também corresponde a não haver texto nenhum), e vai também fazer `ls` a todas
+  as pastas lá dentro:
+![asterisk](./img/asterisk.png)
+
 ### `|`
 
 Voltando a redirecionamento de output, se quiseres mandar o output de um comando para o input de
