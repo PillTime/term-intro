@@ -515,7 +515,7 @@ Lembras-te de ter dito que havia [mais razões para usar o `echo`](#env)?
 Se quiseres criar um ficheiro novo, mas em vez de ser vazio queres que tenha já algum texto, em vez
   de usares o `touch` e depois pores texto lá dentro com um editor, podes usar o `echo` em conjunto
   com o `>`:
-![>](./>.png)
+![redir](./img/redir.png)
 
 Ao contrário do `touch`, o `>` apaga o ficheiro se ele já existir, e os operadores não têm flags,
   por isso não podes fazer o mesmo que se faz no `cp` e `mv` para prevenir a substituição de um
@@ -529,11 +529,22 @@ Caso queiras acrescentar texto a um ficheiro que já existe, podes usar o `>>` e
 
 ### `|`
 
-O operador pipe, representado pela barra vertical `|`, é um conceito fundamental que mais vais ver em exercícios de shell. Ele permite-te o encadear inputs e outputs de vários comandos, isto é, o output de um comando é usado como input para outro.
+Voltando a redirecionamento de output, se quiseres mandar o output de um comando para o input de
+  outro, podes usar o `|` (pipe).
 
-Se quiseres ver os ficheiros de texto num diretório podes escrever `ls -l | grep *.txt`. Se fizeres só o `ls -l` o terminal lista-te os itens para o ecrã (stdout) mas como tens um pipe entre os comandos a lista resultante do `ls -l` será o input do `grep *.txt`.
+Um exemplo comum é uso do `cat` em conjunto com o `grep`.
+Como sabes, é possível procurar por padrões em ficheiros de texto usando só o `grep`.
+No entanto muita gente está mais habituada a fazer <code>cat <b>[ficheiro]</b> | grep
+  <b>[padrão]</b></code>:
+![pipe](./img/pipe.png)
 
-Outro exemplo útil é procurar se um dado processo está a ocorrer em background, podes fazer `ps -ef | grep <nome do processo>`. Em princípo ele vai-te dar dois resultados com este comando, o processo que estás à procura e o comando que acabaate de introduzir uma vez que cada comando que inseres no terminal abre um novo processo!
+Aqui o output do `cat` (o conteúdo do ficheiro) é passado como input do `grep`, e o `grep`, quando
+não recebe um ficheiro, lê do seu input.
+Ou seja, neste caso `cat fich.txt | grep texto` em prática é o mesmo que `grep texto fich.txt`.
+
+Outros usos comuns do `|` são com o `ls` para encontrar informação sobre ficheiros em específico,
+  como por exemplo `ls -lh | grep fich.txt`, ou com o `sort` para ordernar o output de outro
+  comando, como por exemplo `find . -maxdepth 2 -type f -exec du -h {} + | sort -rh | head`.
 
 ### `&`
 
