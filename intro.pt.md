@@ -525,6 +525,15 @@ Caso queiras acrescentar texto a um ficheiro que já existe, podes usar o `>>` e
 
 ### `&&`, `||`, e `;`
 
+Se quiseres só por comandos a executar uns a seguir aos outros, podes usar o `&&`, o `||`, ou o `;`.
+O uso destes operadores é da forma <code>[comando 1] <b>[operador]</b> [comando 2]</code>.
+
+O `&&` executa o segundo comando apenas se o primeiro terminou sem erros.
+
+O `||` faz o contrário, executa o segundo comando apenas se o primeiro terminou com erros.
+
+O `;` é o mais simples, e executa sempre ambos os comandos, o segundo depois do primeiro acabar.
+
 ### `*`
 
 O `*` não é bem um operador, é mais um carater especial.
