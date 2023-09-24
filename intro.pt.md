@@ -389,7 +389,31 @@ A realidade é que o `cat` serve para concatenar o conteúdo de vários ficheiro
 
 ## `less`
 
-## `head`
+Imagina agora que queres fazer `cat` dum ficheiro, mas esse ficheiro é literalmente a biblia
+  inteira.
+Vai ser uma confusão enorme, só vais estar a ver o fim do ficheiro, e para ir ao início tens que dar
+  imenso scroll.
+
+Para evitar isto podemos usar o `less`.
+Pega num ficheiro, ou cria tu um, com imenso texto, e faz <code>less <b>[ficheiro]</b></code>:
+![less](./img/less.png)
+
+<details>
+  <summary>CURIOSIDADE: Comando podem usar outros comandos</summary>
+  Provavelmente reparaste que usar o <code>less</code> é bastante parecido a usar o
+    <code>man</code>.
+  Isso é por que o <code>man</code> usa o <code>less</code> para te mostrar os manuais.
+</details>
+
+## `head` e `tail`
+
+Há outras formas de obter informação de ficheiros grandes sem mostrar tudo.
+Se sabes que a informação que precisas está no início de um ficheiro, podes usar o `head`, e ele
+  dá-te as primeiras 10 linhas desse ficheiro:
+![head](./img/head.png)
+
+Para complementar o `head` também tens o `tail`, que te dá as últimas 10 linhas de um ficheiro, caso
+  o que precises esteja no fim do ficheiro.
 
 ## `tail`
 
