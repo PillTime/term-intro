@@ -503,7 +503,25 @@ Não é perfeito, mas ajuda, especialmente para comandos simples que alguém que
 
 ## Operadores
 
-### `>` e `2>`
+As shells, além de suportar comandos, também podem receber operadores em conjunto com os comandos.
+Estes operadores permitem tornar o uso do terminal mais flexivel, juntando vários comandos num só.
+
+### `>` e `>>`
+
+O `>` e `2>` são operadores de redirecionamento.
+Servem para mandar o output de comandos, que normalmente seriam posto no terminal, para ficheiros.
+
+Lembras-te de ter dito que havia [mais razões para usar o `echo`](#env)?
+Se quiseres criar um ficheiro novo, mas em vez de ser vazio queres que tenha já algum texto, em vez
+  de usares o `touch` e depois pores texto lá dentro com um editor, podes usar o `echo` em conjunto
+  com o `>`:
+![>](./>.png)
+
+Ao contrário do `touch`, o `>` apaga o ficheiro se ele já existir, e os operadores não têm flags,
+  por isso não podes fazer o mesmo que se faz no `cp` e `mv` para prevenir a substituição de um
+  ficheiro por outro.
+
+Caso queiras acrescentar texto a um ficheiro que já existe, podes usar o `>>` em vez do `>`:
 
 ### `&&`, `||`, e `;`
 
