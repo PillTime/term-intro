@@ -63,7 +63,7 @@ O primeiro comando que vamos ver é bastante simples, e chama-se `pwd` (**P**rin
   **D**irectory).
 Experimenta correr o comando.
 Escreve `pwd` e carrega _Enter_, vais ter um output do género:
-![pwd command](./img/term01.png)
+![pwd](./img/pwd.png)
 
 No teu caso a pasta deve ter um nome diferente por causa do nome to teu utilizador, mas também deve
   estar dentro da pasta `/home`, que é a pasta onde as pastas pessoais costumam ficar.
@@ -73,10 +73,10 @@ O `pwd` é raramente usado, não por ser um comando bastante simples, mas porque
 Experimenta abrir o teu explorador de ficheiros e carregar com o botão direito do rato numa pasta
   qualquer.
 Deve-te aparecer uma opção do estilo "abrir o terminal aqui" (se não tiveres essa opção, azar):
-![open in terminal option](./img/file00.png)
+![openterm](./img/openterm.png)
 
 Carrega nela e executa `pwd` no terminal que te aparece:
-![pwd in other folder](./img/term02.png)
+![pwdother](./img/pwdother.png)
 
 Experimenta fazer isto em mais pastas, ou se quiseres, podes passar já para o próximo comando.
 
@@ -101,7 +101,7 @@ Experimenta fazer isto em mais pastas, ou se quiseres, podes passar já para o p
 O próximo comando que vamos ver é o `ls` (**L**i**S**t), que serve para listar o conteúdo de pastas.
 
 Basta fazer `ls` e ficas a saber o que está dentro da pasta atual:
-![output ls](./img/term03.png)
+![ls](./img/ls.png)
 
 ### Argumentos
 
@@ -114,7 +114,7 @@ No caso do `ls`, os argumentos que ele espera são pastas, para quando quiseres 
 
 Experimenta fazer `ls /` (a pasta `/` é a pasta pai de todas as outras, uma espécie de `C:\` do
   Linux):
-![ls root](./img/term04.png)
+![lsroot](./img/lsroot.png)
 
 ### Caminhos
 
@@ -155,7 +155,7 @@ Estes são os que têm o nome a começar por `.`.
 
 Para podermos listar o conteúdo todo de uma pasta, incluindo o que está escondido, podemos usar a
   flag `-a` (ou `--all` que é o equivalente na forma longa):
-![ls hidden](./img/term05.png)
+![lshidden](./img/lshidden.png)
 
 ### Pseudo-Pastas
 
@@ -187,7 +187,7 @@ O comando `man` mostra bastante informação sobre cada comando, tal como se usa
 Para o usares basta fazer <code>man <b>[commando]</b></code>.
 Por exemplo, `man ls`.
 E sim, também podes fazer `man man`:
-![man man](./img/term06.png)
+![man](./img/man.png)
 
 Para percorrer cada manual, usa as setas do teclado (alguns terminais suportam usar a roda do rato).
 Para sair do manual carrega na tecla `Q`.
@@ -204,7 +204,7 @@ Podemos criar pastas com o comando `mkdir` (**M**a**K**e **DIR**ectory).
 
 Para criar uma pasta chamada "Projetos", faz `mkdir Projetos`.
 Podes usar o `ls` para verificar que o comando funcionou:
-![mkdir](./img/term07.png)
+![mkdir](./img/mkdir.png)
 
 ### Espaços no terminal
 
@@ -235,7 +235,7 @@ O contrário do criar pastas com `mkdir` é remove-las com o `rmdir` (**R**e**M*
 Tal como o `mkdir` e maior parte dos outros comandos, o `rmdir` aceita mais que um argumento, por
   isso podemos remover as pastas todas que acabamos de criar (exceto a "Projetos") com um só
   comando: `rmdir "Uma Pasta" Uma Pasta`:
-![rmdir](./img/term08.png)
+![rmdir](./img/rmdir.png)
 
 Atenção que o `rmdir` só consegue apagar pastas vazias.
 Se a pasta tiver alguma coisa lá dentro o comando vai-se queixar.
@@ -247,7 +247,7 @@ Para isso podemos usar o `cd` (**C**hange **D**irectory).
 
 Provalvemente já estás a imaginar como é que o comando funciona: <code>cd <b>[pasta]</b></code>.
 Faz `cd Projetos`:
-![cd](./img/term09.png)
+![cd](./img/cd.png)
 
 ## `clear`
 
@@ -269,35 +269,33 @@ Se fizeres **Ctrl + L**, o texto é movido para cima, mas se fizeres scroll cons
 
 ## `touch`
 
-Podes agora criar um ficheiro novo vazio com `touch`.
+Podes agora criar um ficheiro novo com `touch`.
 Experimenta fazer `touch ola.txt`:
-![touch](./img/term10.png)
+![touch](./img/touch.png)
 
 Se fizeres `touch` num ficheiro que já existe, o comando atualiza o timestamp de modificação do
-  ficheiro.
+  ficheiro em vez de tentar criar um novo.
 
-Este comando também tem a capacidade de produzir vários ficheiros em grupo. Se fizeres:
+O `touch` pode parecer um pouco inútil à primeira vista, mas há realmente casos em que é útil.
 
-O touch à primeira vista pode não parecer muito útil para além de criar ficheiros para os editar,
-  mas uma técnica bastante conhecida de organização de pastas é deixar marcadores.
-Estes marcadores podem ser representados por ficheiros vazios.
+Se estás num projeto novo e sabes que vais precisar de ter vários ficheiros, em vez de criar um a um
+  podes simplesmentes fazer algo do género `touch fich1.c fich2.c fich3.c`.
 
-Por exemplo, no caso de teres uma pasta com inúmeros exercícios de Python de várias fichas, se não
-  os quiseres dividir por pastas podes fazer `touch ficha1.py ficha2.py ficha3.py`, e assim os
-  exercícios ficam já divididos pelos ficheiros.
-
-Além disso, quando usares `git` e quiseres guardar uma pasta vazia num repositório, vais ter que
-  incluir um ficheiro vazio lá, como por exemplo `.gitkeep`, porque o `git` não aceita pastas
-  vazias.
+Outro caso em que ter o `touch` dá jeito é quando estiveres a usar o `git`, que provavelmente vais
+  aprender a usar numas das cadeiras de programação.
+O `git` não guarda pastas vazias em repositórios, por isso se quiseres guardar uma pasta vazia tens
+  que por lá um ficheiro qualquer.
+O típico é fazer `touch .gitkeep` nessas pastas vazias (o nome do ficheiro não precisa de ser
+  necessáriamente `.gitkeep`).
 
 ## `rm`
 
-Para se opor ao `touch`, temos o `rm` (**R**e**M**ove).
+Para se opor ao `touch`, temos o `rm` (**R**e**M**ove) que serve para remover ficheiros.
 
-Usa `rm ola.txt` para remove o ficheiro que criaste:
-![rm](./img/term11.png)
+Usa `rm ola.txt` para remover o ficheiro que acabaste de criar:
+![rm](./img/rm.png)
 
-Também podes usar o `rm` para remove pastas não vazias usando a flag `-r`.
+Também podes usar o `rm` para remover pastas não vazias usando a flag `-r`.
 
 ### Perigos do `rm`
 
@@ -305,27 +303,36 @@ O `rm` é um comando um bocado perigoso, porque os ficheiros que lhe são passad
   pasta de reciclagem.
 São eliminados de imediato.
 
+Por isso recomendo que uses o explorador de ficheiros para apagar o que for preciso.
+**A sério, já aconteceu um professor perder os testes que os alunos fizeram por causa do `rm`.**
+
 ## `cp`
 
-O comando `cp` significa *copy* (copiar) e o seu objetivo principal é duplicar ficheiros ou directórios. Recebe dois argumentos principais: o ficheiro ou diretório de origem e o destino onde a cópia deve ser colocada. A fonte pode ser um único ficheiro ou um diretório, enquanto o destino pode ser um diretório existente onde a fonte será copiada ou o nome de um novo ficheiro ou diretório a criar. A sintaxe do comando é a seguinte: 
-```cp [opções] <fonte> <destino>```shell
+Agora que já sabemos criar e apagar ficheiros podemos passar a aprendar a copiá-los com o `cp`
+  (**C**o**P**y).
+Criar um ficheiro novo com o `touch`, abre-o num editor de texto, e mete um texto qualquer lá.
+Agora faz <code>cp <b>[original]</b> <b>[novo]</b></code>, e abre o ficheiro novo:
+![cp](./img/cp.png)
 
-Deixamos aqui 2 exemplos de opções que te podem ser úteis:
+Atenção que por predefinição o `cp` apaga o ficheiro de destino se ele já existir, para poder criar
+  o novo.
+Usa a flag `-i` para nestes casos o `cp` perguntar se pode apagar os ficheiros.
 
-- `-r` ou `-R`: usado para copiar diretórios recursivamente, isto é, copiar todo o diretório e o seu conteúdo. Sem esta opção o diretório só é copiado se estiver vazio NÃO TENHO CERTEZA DESTA ULTIMA FRASE
-
-- `-i`: usado para quando quiseres ser avisado de qualquer ficheiro que já exista no ficheiro e se queres dar overwrite ou dar skip
-
-- `-a`: usado para quando queres preservar as propriedades dos ficheiros (como permissão de execução)
-
-
-Exemplo de execução:
-Por exemplo se quiseres copiar todos os ficheiros de python para uma pasta podes escrever
-```cp -i *.py Documents/fichasAPT```shell
-
-Uma nota: quando quiseres copiar tem atenção a escrever o caminho correto pois podes cometer erros facilmente ou o comando simplemsnete não funcionar se não detetar a fonte que queres copiar. 
+Também podes copiar pastas inteiras com a flag `-r`.
 
 ## `mv`
+
+Se quiseres moverum ficheiro de uma pasta para a outra, um simplesmente mudar o nome de um ficheiro,
+  podes usar o `mv` (**M**o**V**e).
+Experimenta mudar o nome do ficheiro novo que criaste com o `cp`.
+A forma de o utilizar é igual ao `cp`, <code>mv <b>[caminho antigo]</b> <b>[caminho novo]</b></code>:
+![mv](./img/mv.png)
+
+Tal como o `cp`, tens que ter atenção porque se no caminho novo já existir um ficheiro, ele vai ser
+  substituido pelo que estás a mover.
+O `mv` usa a mesma flag que o `cp` nestes casos, por isso para prevenir usa a flag `-i`.
+
+No caso de mover pastas, ao contrário do `cp` não precisas de flag nenhuma.
 
 ## `echo`
 
@@ -333,20 +340,17 @@ Uma nota: quando quiseres copiar tem atenção a escrever o caminho correto pois
 
 ## `cat`
 
-O comando `cat` vem de *concatenate* e é usado para mostrar o conteúdo de ficheiros no terminal.
+Se quiseres ver o conteúdo de um ficheiro sem sair do terminal podes usar o `cat`
+  (**C**onc**AT**enate).
 
-A sintaxe do comando segue o seguinte: 
-```cat [opções] <ficheiros>```shell
+Pega num ficheiro qualquer que tenha texto, ou cria tu um, e faz <code>cat <b>[ficheiro]</b></code>:
+![cat](./img/cat.png)
 
-O mais habitual é usar o cat sem opções mas ocasionalmente podes vir a ver ou utilizar estas:
-
-- `-n`: numera as linhas do ficheiro no output
-
-- `-E`: preenche o fim de cada linha com '$'
-
-Em suma, se quiseres ver o conteúdo de um ficheiro a partir do terminal podes escrever:
-
-```cat foo.txt```shell
+É provável que te estejas a perguntar porque é que o comando se chama "concatenate".
+A realidade é que o `cat` serve para concatenar o conteúdo de vários ficheiros, fazendo algo do
+  género `cat fich1.txt fich2.txt fich3.txt`.
+É só que em prática raramente é necessário fazer isto, por isso o `cat` costuma ser usado só para
+  mostrar o conteúdo de um ficheiro.
 
 ## `less`
 
