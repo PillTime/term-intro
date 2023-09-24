@@ -558,6 +558,14 @@ Se executaste o code em background podes ter reparado que o code agora ficou lig
 
 ## `kill`
 
+O comando `kill` é usado para enviar signals a processos que estejam a ocorrer que em príncipio são signals de terminação. Sempre que precisares de "matar um processo" tens de usar este comando. Ele para terminar um processo precisa de saber o PID (ID do processo). É um dos comandos mais intuitivos mas tem algumas flags de notar:
+
+- `-l`: lista os signals diferentes e os seus números
+
+- `-9` ou `SIGKILL`: envia um signal de kill para forçar a terminação de um processo mesmo quando aquela aplicação mais chata não desliga o `-9` mata-o >:)
+
+- `-INT`: envia um signal de terminação mas não força, é o equivalente a clicares "Ctrl + C". Permite que o processo termine as suas operações de forma normal. É a forma recomendada de desligar um processo.
+
 ## `exit`
 
 ### **Ctrl + D**
