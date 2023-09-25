@@ -432,6 +432,8 @@ Pega num ficheiro, ou cria tu um, com imenso texto, e faz <code>less <b>[ficheir
 
 ![less](./img/less.png)
 
+Para sair do `less`, basta carregar na tecla `Q`.
+
 <details>
   <summary>CURIOSIDADE: Comando podem usar outros comandos</summary>
   Provavelmente reparaste que usar o <code>less</code> é bastante parecido a usar o
