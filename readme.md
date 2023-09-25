@@ -82,8 +82,6 @@ Carrega nela e executa `pwd` no terminal que te aparece:
 
 ![pwdother](./img/pwdother.png)
 
-Experimenta fazer isto em mais pastas, ou se quiseres, podes passar já para o próximo comando.
-
 <details>
   <summary>CURIOSIDADE: Diferença entre <b>pastas</b> e <b>diretórios</b></summary>
   Não há realmente uma diferença entre os dois termos.
