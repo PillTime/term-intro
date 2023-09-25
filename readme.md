@@ -44,15 +44,15 @@ O prompt é algo que pode ser configurado, e distribuições diferentes provavel
   ligeiramente (ou muito) diferente umas das outras.
 Para não estar a complicar muito, vamos analisar o prompt do screenshot.
 
- - `[`: Só um separador visual, não tem significado especial.
  - `carlos`: Nome do utilizador atual.
- - `@`: Outro separador, no entanto o `@` costuma ser usado para indicar uma localização.
- - `armix`: Hostname do sistema atual.
+ - `@`: Um separador visual.
+   - (o `@` costuma ser usado para indicar uma localização, como é o caso aqui)
+ - `qetu`: Hostname do sistema atual.
+ - `:`: Mais um separador visual, este não tem significado especial.
  - `~`: Pasta atual. Nas shells, `~` indica a pasta pessoal do utilizador atual.
- - `]`: Mais um separador visual, não tem significado especial.
 
-E no fim, o prompt acaba com um `$`, que indica o final do prompt e também indica que estamos com um
-  utilizador normal.
+E por fim, temos um `$`, que indica o final do prompt e também indica que estamos com um utilizador
+  normal.
 Normalmente as shells estão configuradas para mostrar `#` quando estamos com o utilizador `root`,
   que no Linux é o utilizador que serve de administrador, com acesso total ao sistema.
 
