@@ -13,6 +13,7 @@ Dependendo da distribuição Linux que estás a usar, o terminal pode ter nomes 
 Nalguns chama-se **Gnome Terminal**, noutros **Konsole**, e noutros outra coisa qualquer, mas se
   procurares simplesmente por **`terminal`** deve-te aparecer a aplicação correta, que vai ter mais
   ou menos este aspeto:
+
 ![term](./img/term.png)
 
 Na realidade temos dois programas a correr aqui.
@@ -63,6 +64,7 @@ O primeiro comando que vamos ver é bastante simples, e chama-se `pwd` (**P**rin
   **D**irectory).
 Experimenta correr o comando.
 Escreve `pwd` e carrega _Enter_, vais ter um output do género:
+
 ![pwd](./img/pwd.png)
 
 No teu caso a pasta deve ter um nome diferente por causa do nome to teu utilizador, mas também deve
@@ -73,9 +75,11 @@ O `pwd` é raramente usado, não por ser um comando bastante simples, mas porque
 Experimenta abrir o teu explorador de ficheiros e carregar com o botão direito do rato numa pasta
   qualquer.
 Deve-te aparecer uma opção do estilo "abrir o terminal aqui" (se não tiveres essa opção, azar):
+
 ![openterm](./img/openterm.png)
 
 Carrega nela e executa `pwd` no terminal que te aparece:
+
 ![pwdother](./img/pwdother.png)
 
 Experimenta fazer isto em mais pastas, ou se quiseres, podes passar já para o próximo comando.
@@ -101,6 +105,7 @@ Experimenta fazer isto em mais pastas, ou se quiseres, podes passar já para o p
 O próximo comando que vamos ver é o `ls` (**L**i**S**t), que serve para listar o conteúdo de pastas.
 
 Basta fazer `ls` e ficas a saber o que está dentro da pasta atual:
+
 ![ls](./img/ls.png)
 
 ### Argumentos
@@ -114,6 +119,7 @@ No caso do `ls`, os argumentos que ele espera são pastas, para quando quiseres 
 
 Experimenta fazer `ls /` (a pasta `/` é a pasta pai de todas as outras, uma espécie de `C:\` do
   Linux):
+
 ![lsroot](./img/lsroot.png)
 
 ### Caminhos
@@ -155,6 +161,7 @@ Estes são os que têm o nome a começar por `.`.
 
 Para podermos listar o conteúdo todo de uma pasta, incluindo o que está escondido, podemos usar a
   flag `-a` (ou `--all` que é o equivalente na forma longa):
+
 ![lshidden](./img/lshidden.png)
 
 ### Pseudopastas
@@ -187,6 +194,7 @@ O comando `man` mostra bastante informação sobre cada comando, tal como se usa
 Para o usares basta fazer <code>man <b>[commando]</b></code>.
 Por exemplo, `man ls`.
 E sim, também podes fazer `man man`:
+
 ![man](./img/man.png)
 
 Para percorrer cada manual, usa as setas do teclado (alguns terminais suportam usar a roda do rato).
@@ -208,6 +216,7 @@ Podemos criar pastas com o comando `mkdir` (**M**a**K**e **DIR**ectory).
 
 Para criar uma pasta chamada "Projetos", faz `mkdir Projetos`.
 Podes usar o `ls` para verificar que o comando funcionou:
+
 ![mkdir](./img/mkdir.png)
 
 ### Espaços no terminal
@@ -239,6 +248,7 @@ O contrário do criar pastas com `mkdir` é removê-las com o `rmdir` (**R**e**M
 Tal como o `mkdir` e maior parte dos outros comandos, o `rmdir` aceita mais que um argumento, por
   isso podemos remover as pastas todas que acabamos de criar (exceto a "Projetos") com um só
   comando: `rmdir "Uma Pasta" Uma Pasta`:
+
 ![rmdir](./img/rmdir.png)
 
 Atenção que o `rmdir` só consegue apagar pastas vazias.
@@ -251,6 +261,7 @@ Para isso podemos usar o `cd` (**C**hange **D**irectory).
 
 Provavelmente já estás a imaginar como é que o comando funciona: <code>cd <b>[pasta]</b></code>.
 Faz `cd Projetos`:
+
 ![cd](./img/cd.png)
 
 ## `clear`
@@ -275,6 +286,7 @@ Se fizeres **Ctrl + L**, o texto é movido para cima, mas se fizeres scroll cons
 
 Podes agora criar um ficheiro novo com `touch`.
 Experimenta fazer `touch ola.txt`:
+
 ![touch](./img/touch.png)
 
 Se fizeres `touch` num ficheiro que já existe, o comando atualiza o timestamp de modificação do
@@ -297,6 +309,7 @@ O típico é fazer `touch .gitkeep` nessas pastas vazias (o nome do ficheiro nã
 Para se opor ao `touch`, temos o `rm` (**R**e**M**ove) que serve para remover ficheiros.
 
 Usa `rm ola.txt` para remover o ficheiro que acabaste de criar:
+
 ![rm](./img/rm.png)
 
 Também podes usar o `rm` para remover pastas não vazias usando a flag `-r`.
@@ -316,6 +329,7 @@ Agora que já sabemos criar e apagar ficheiros podemos passar a aprender a copi�
   (**C**o**P**y).
 Criar um ficheiro novo com o `touch`, abre-o num editor de texto, e mete um texto qualquer lá.
 Agora faz <code>cp <b>[original]</b> <b>[novo]</b></code>, e abre o ficheiro novo:
+
 ![cp](./img/cp.png)
 
 Atenção que por predefinição o `cp` apaga o ficheiro de destino se ele já existir, para poder criar
@@ -330,6 +344,7 @@ Se quiseres mover um ficheiro de uma pasta para a outra, um simplesmente mudar o
   ficheiro, podes usar o `mv` (**M**o**V**e).
 Experimenta mudar o nome do ficheiro novo que criaste com o `cp`.
 A forma de o utilizar é igual ao `cp`, <code>mv <b>[caminho antigo]</b> <b>[caminho novo]</b></code>:
+
 ![mv](./img/mv.png)
 
 Tal como o `cp`, tens que ter atenção porque se no caminho novo já existir um ficheiro, ele vai ser
@@ -342,6 +357,7 @@ No caso de mover pastas, ao contrário do `cp` não precisas de flag nenhuma.
 
 O `echo` é um comando bastante simples.
 Os argumentos que lhe dás, ele dá output separados por um espaço:
+
 ![echo](./img/echo.png)
 
 Pode parecer um comando bastante inútil, mas vais ver já a seguir e também mais à frente que às
@@ -361,16 +377,19 @@ Estas pastas especiais são definidas por uma variável de ambiente chamada `PAT
 Para veres o valor que estas variáveis guardam podes usar o `echo` e por um `$` antes do nome da
   variável.
 Por exemplo, `echo $PATH`:
+
 ![echopath](./img/echopath.png)
 
 ### `env`
 
 Também existe o comando `env`, que mostra todas as variáveis de ambiente presentes na sessão e os
   seus valores:
-![env](./img/env)
+
+![env](./img/env.png)
 
 Pode parecer que com o `env` o `echo` já perdeu a sua utilidade, mas com o `env` não consegues
   fazer `echo Chamo-me $USER e estou a usar a shell $SHELL.`:
+
 ![echotrick](./img/echotrick.png)
 
 Este tipo de uso é bastante comum em scripts que precisam de dar informação ao utilizador.
@@ -383,6 +402,7 @@ Se quiseres ver o conteúdo de um ficheiro sem sair do terminal podes usar o `ca
   (**C**onc**AT**enate).
 
 Pega num ficheiro qualquer que tenha texto, ou cria tu um, e faz <code>cat <b>[ficheiro]</b></code>:
+
 ![cat](./img/cat.png)
 
 É provável que te estejas a perguntar porque é que o comando se chama "concatenate".
@@ -400,6 +420,7 @@ Vai ser uma confusão enorme, só vais estar a ver o fim do ficheiro, e para ir 
 
 Para evitar isto podemos usar o `less`.
 Pega num ficheiro, ou cria tu um, com imenso texto, e faz <code>less <b>[ficheiro]</b></code>:
+
 ![less](./img/less.png)
 
 <details>
@@ -414,6 +435,7 @@ Pega num ficheiro, ou cria tu um, com imenso texto, e faz <code>less <b>[ficheir
 Há outras formas de obter informação de ficheiros grandes sem mostrar tudo.
 Se sabes que a informação que precisas está no início de um ficheiro, podes usar o `head`, e ele
   dá-te as primeiras 10 linhas desse ficheiro:
+
 ![head](./img/head.png)
 
 Para complementar o `head` também tens o `tail`, que te dá as últimas 10 linhas de um ficheiro, caso
@@ -426,6 +448,7 @@ Continuando com a procura de informação em ficheiros, se a tua situação é a
 
 Para usares o `grep` podes fazer <code>grep <b>[padrão]</b> <b>[ficheiro]</b></code>, e ele
   mostra-te as linhas que têm esse **padrão**:
+
 ![grep](./img/grep.png)
 
 Podes também usar a flag `-n` para também teres o número das linhas que aparecem, e `-i` para o
@@ -438,6 +461,7 @@ Se precisares de fazer `cp` ou `mv` a ficheiros que não estejam na tua pasta pe
   pessoal pertencem ao sistema, e não a ti.
 
 Para conseguires alterar os ficheiros do sistema, podes usar o `sudo` (**SU**peruser **DO**):
+
 ![sudo](./img/sudo.png)
 
 ### Instalação de Aplicações
@@ -515,6 +539,7 @@ Lembras-te de ter dito que havia [mais razões para usar o `echo`](#env)?
 Se quiseres criar um ficheiro novo, mas em vez de ser vazio queres que tenha já algum texto, em vez
   de usares o `touch` e depois pores texto lá dentro com um editor, podes usar o `echo` em conjunto
   com o `>`:
+
 ![redir](./img/redir.png)
 
 Ao contrário do `touch`, o `>` apaga o ficheiro se ele já existir, e os operadores não têm flags,
@@ -542,6 +567,7 @@ O `*` "expande-se" para substituir e corresponder a qualquer texto.
 Por exemplo, se estiveres na tua pasta pessoal e fizeres `ls *`, ele vai fazer `ls` à tua pasta
   pessoal (porque `*` também corresponde a não haver texto nenhum), e vai também fazer `ls` a todas
   as pastas lá dentro:
+
 ![asterisk](./img/asterisk.png)
 
 ### `|`
@@ -553,6 +579,7 @@ Um exemplo comum é uso do `cat` em conjunto com o `grep`.
 Como sabes, é possível procurar por padrões em ficheiros de texto usando só o `grep`.
 No entanto muita gente está mais habituada a fazer <code>cat <b>[ficheiro]</b> | grep
   <b>[padrão]</b></code>:
+
 ![pipe](./img/pipe.png)
 
 Aqui o output do `cat` (o conteúdo do ficheiro) é passado como input do `grep`, e o `grep`, quando
@@ -599,7 +626,8 @@ Por predefinição o `kill` manda aos processos um **SIGTERM**, que indica aos p
   terminar a execução (dai o nome `kill`).
 
 O comando usa-se com o **ID** do processo, algo que é mostrado quando fazes `&`:
-![kill](./img/kill)
+
+![kill](./img/kill.png)
 
 Se um processo não estiver a responder e o `kill` não funcionar, podes usar a flag `-9` para mandar
   um **SIGKILL**, que faz com que o sistema operativo force a terminação do processo.
