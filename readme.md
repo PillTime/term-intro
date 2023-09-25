@@ -89,13 +89,12 @@ Carrega nela e executa `pwd` no terminal que te aparece:
     ser utilizado.
 
   Há quem diga que há realmente uma diferença, e até podem ter alguma razão (aceito
-    [este](https://retrocomputing.stackexchange.com/a/26176) argumento), mas há dois casos que não
+    [este argumento](https://retrocomputing.stackexchange.com/a/26176)), mas há dois casos que não
     tem razão absolutamente nenhuma:
   <ul>
     <li>Se disserem que "diretório" é o quando usas o terminal e "pasta" é o quando usas GUI.</li>
     <li>Se disserem que é "pasta" no Windows e macOS, e "diretório" nos outros SOs.</li>
   </ul>
-  Esse pessoal tem só problemas na cabeça.
 </details>
 
 ## `ls`
@@ -110,7 +109,7 @@ Basta fazer `ls` e ficas a saber o que está dentro da pasta atual:
 
 Os comandos podem receber argumentos, que **são separados por espaços**, e normalmente servem para
   indicar onde ou em que coisa é que queres executar o comando.
-Para usares argumentos, basta po-los à frente do comando.
+Para usares argumentos, basta pô-los à frente do comando.
 
 No caso do `ls`, os argumentos que ele espera são pastas, para quando quiseres ver o conteúdo duma
   pasta estando noutra.
@@ -240,7 +239,7 @@ Para resolver este problema podes usar aspas para definir algo com espaços como
   <summary>CURIOSIDADE: Alternativa às aspas</summary>
   Em vez de <code>"Uma Pasta"</code>, podes fazer <code>Uma\ Pasta</code>.
   A diferença é que em vez de usar aspas, podes usar o <i>escape character</i> <code>\</code>, que
-    permite <b>escapar</b> a função especial de caráteres.
+    permite <b>escapar</b> a função especial de carateres.
   Como o <code>\</code> é um caráter para escapar funcionalidades, se o quiseres usar de forma
     literal, tens que o escapar fazendo <code>\\</code>.
 </details>
