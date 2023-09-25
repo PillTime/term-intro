@@ -134,6 +134,12 @@ Por exemplo, eu estando na minha pasta pessoal, que no meu caso o caminho absolu
   para listar o conteúdo da pasta de documentos, posso usar o caminho absoluto e fazer
   `ls /home/carlos/Documents`, ou então posso usar o caminho relativo e fazer `ls Documents`.
 
+Mais uma coisa sobre caminhos.
+O que aparece no prompt como `~` não é só visual.
+Também podes usar `~` como o início de um caminho, a shell substitui o `~` pelo caminho absoluta da
+  tua pasta pessoal.
+Ou seja, para ver o conteúdo da minha pasta de documentos, também posso fazer `ls ~/Documents`.
+
 ### Flags
 
 Existe um tipo especial de argumentos, chamados de flags.
@@ -264,6 +270,10 @@ Faz `cd Projetos`:
 
 ![cd](./img/cd.png)
 
+Lembra-te também da existência da pseudopasta `..`!
+Vais ter que fazer `cd ..` bastantes vezes.
+Mais do que outra pasta qualquer.
+
 ## `clear`
 
 O teu terminal provavelmente já está cheio de texto que já não te interessa.
@@ -380,6 +390,8 @@ Por exemplo, `echo $PATH`:
 
 ![echopath](./img/echopath.png)
 
+Atenção que podes usar variáveis de ambiente com qualquer comando, não só o `echo`.
+
 ### `env`
 
 Também existe o comando `env`, que mostra todas as variáveis de ambiente presentes na sessão e os
@@ -436,10 +448,10 @@ Há outras formas de obter informação de ficheiros grandes sem mostrar tudo.
 Se sabes que a informação que precisas está no início de um ficheiro, podes usar o `head`, e ele
   dá-te as primeiras 10 linhas desse ficheiro:
 
-![head](./img/head.png)
+E para complementar o `head` também tens o `tail`, que te dá as últimas 10 linhas de um ficheiro,
+  caso o que precises esteja no fim do ficheiro.
 
-Para complementar o `head` também tens o `tail`, que te dá as últimas 10 linhas de um ficheiro, caso
-  o que precises esteja no fim do ficheiro.
+![head](./img/headtail.png)
 
 ## `grep`
 
@@ -463,6 +475,13 @@ Se precisares de fazer `cp` ou `mv` a ficheiros que não estejam na tua pasta pe
 Para conseguires alterar os ficheiros do sistema, podes usar o `sudo` (**SU**peruser **DO**):
 
 ![sudo](./img/sudo.png)
+
+Sim, é normal não aparecer nada quando escreves a tua palavra-passe, mas é como se estivesse na
+  mesma.
+Dá para usar as setas do teclado para andar pela palavra-passe e o botão de apagar também funciona.
+
+Se achas que te enganaste a escrever a tua palavra-passe e queres apagar tudo, podes fazer
+_Ctrl + U_ (apaga tudo à esquerda do cursor) em vez de deixar o botão de apagar premido.
 
 ### Instalação de Aplicações
 
@@ -617,17 +636,23 @@ Se quiseres que o comando continue a executar mesmo fechando o terminal, podes a
 
 Com estes dois ajustes, o comando do "Visual Studio Code" fica assim: `code . > /dev/null & disown`.
 
-## `kill`
+## `kill`, `pgrep`, e `pkill`
 
-O comando `kill` é usado para enviar signals a processos que estejam a ocorrer.
+O comando `kill` é usado para enviar sinais a processos que estejam a decorrer.
 Estes sinais servem para avisar os processos que devem fazer algo.
 
 Por predefinição o `kill` manda aos processos um **SIGTERM**, que indica aos processos que devem
   terminar a execução (dai o nome `kill`).
 
-O comando usa-se com o **ID** do processo, algo que é mostrado quando fazes `&`:
+O comando usa-se com o **ID** do processo, algo que é mostrado quando fazes `&`.
+No entanto alguns programas criam mais processos quando são executados e terminam o original, como é
+  o caso do "Visual Studio Code".
+O que podes fazer é usar o comando `pgrep` com as flags `-l` e `-i`, para ver os IDs de processos a
+  correr filtrando o nome por um padrão:
 
 ![kill](./img/kill.png)
+
+Uma alternativa é usar o comando `pkill`, que junta o `pgrep` e o `kill`.
 
 Se um processo não estiver a responder e o `kill` não funcionar, podes usar a flag `-9` para mandar
   um **SIGKILL**, que faz com que o sistema operativo force a terminação do processo.
@@ -643,3 +668,15 @@ Tal como o `clear`, o `exit` pode ser trocado por _Ctrl + D_.
 No entanto o _Ctrl + D_ também serve do caráter **EOF** (end of file).
 Por exemplo, se fizeres `cat > fich.txt`, o `cat` fica à espera do teu input, e
   só termina quando receber um **EOF**.
+
+# Conclusão
+
+Parabéns!
+Chegaste ao fim deste guia.
+Obviamente que há muita mais coisa para aprender, mas já sabes o básico.
+O resto vais aprender à medida que usas o terminal.
+
+Se tiveres alguma dúvida podes mandar-me um email a
+  [pilltime@protonmail.com](mailto:pilltime@protonmail.com).
+Se preferires mandar mensagem pelo Discord, o meu username é
+  [pill](https://discord.com/users/66135744967610368).
