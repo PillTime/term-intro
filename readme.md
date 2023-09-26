@@ -176,8 +176,9 @@ Estas são na realidade pseudopastas, e existem em todas as pastas, mesmo as que
 `.` é a pasta atual, ou seja, se fizeres `ls .` recebes o mesmo output que se fizeres só `ls`.
 Esta pseudopasta serve na maioria dos casos para correr um ficheiro executável que está na pasta
   atual.
-Já agora, praticamente todos os comandos neste guia são ficheiro executáveis também, mas estão em
-  pastas especiais que os permite serem executados a partir de qualquer pasta.
+Já agora, praticamente todos os comandos neste guia são ficheiro executáveis também, tais como os
+  que tu vais escrever ao longo da faculdade, mas estão em pastas especiais que os permite serem
+  executados a partir de qualquer pasta.
 
 A pasta `..` é a pasta pai, ou seja, se eu estiver na pasta `/home/carlos`, fazer `ls ..` vai-me
   mostrar o conteúdo da pasta `/home`.
@@ -571,9 +572,10 @@ Caso queiras acrescentar texto a um ficheiro que já existe, podes usar o `>>` e
 Se quiseres só por comandos a executar uns a seguir aos outros, podes usar o `&&`, o `||`, ou o `;`.
 O uso destes operadores é da forma <code>[comando 1] <b>[operador]</b> [comando 2]</code>.
 
-O `&&` executa o segundo comando apenas se o primeiro terminou sem erros.
+O `&&` executa o segundo comando apenas se o primeiro terminou com sucesso.
 
-O `||` faz o contrário, executa o segundo comando apenas se o primeiro terminou com erros.
+O `||` faz o contrário, executa o segundo comando apenas se o primeiro terminou por causa de algum
+  erro.
 
 O `;` é o mais simples, e executa sempre ambos os comandos, o segundo depois do primeiro acabar.
 
