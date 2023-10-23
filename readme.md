@@ -529,7 +529,7 @@ Este comando é um _[fork bomb](https://en.wikipedia.org/wiki/Fork_bomb)_, e bas
   si mesmo até a RAM do computador ficar cheia, obrigando o utilizador a desligar o computador, e
   perder tudo o que estava por gravar.
 
-O terceiro é `| aplay -`.
+O terceiro é `cat /dev/urandom | aplay -`.
 Este já não é tão comum de se ver, mas aparece de vez em quando.
 Este comando executa o `aplay`, que serve para tocar ficheiros de áudio, mas troca o ficheiro pelo
   output `cat /dev/urandom`.
