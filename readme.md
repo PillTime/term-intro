@@ -129,8 +129,8 @@ Por exemplo, eu estando na minha pasta pessoal, que no meu caso o caminho absolu
 
 Mais uma coisa sobre caminhos.
 O que aparece no prompt como `~` não é só visual.
-Também podes usar `~` como o início de um caminho, a shell substitui o `~` pelo caminho absoluta da
-  tua pasta pessoal.
+Também podes usar `~` como o início de um caminho absoluto, a shell substitui o `~` pelo caminho
+  absoluto da tua pasta pessoal.
 Ou seja, para ver o conteúdo da minha pasta de documentos, também posso fazer `ls ~/Documents`.
 
 ### Flags
@@ -172,7 +172,7 @@ Estas são na realidade pseudopastas, e existem em todas as pastas, mesmo as que
 `.` é a pasta atual, ou seja, se fizeres `ls .` recebes o mesmo output que se fizeres só `ls`.
 Esta pseudopasta serve na maioria dos casos para correr um ficheiro executável que está na pasta
   atual.
-Já agora, praticamente todos os comandos neste guia são ficheiro executáveis também, tais como os
+Já agora, praticamente todos os comandos neste guia são ficheiros executáveis também, tais como os
   que tu vais escrever ao longo da faculdade, mas estão em pastas especiais que os permite serem
   executados a partir de qualquer pasta.
 
@@ -212,13 +212,15 @@ Este guia só introduz cada comando, mas com `man` ficas a perceber melhor o que
 
 As setas não são exclusivas ao `man`.
 Provavelmente já reparaste que podes usar as setas da esquerda e da direita para andar pelo comando
-  atual, para o poderes editar antes de o executar.
+  atual, para o poderes alterar antes de o executar.
 Também podes usar as setas de cima e de baixo para veres os comandos que executaste antes, porque a
-  a shell guarda um histórico de comandos executados.
+  shell guarda um histórico de comandos executados.
 
 Além das setas, podes também usar o _TAB_ para fazer autocomplete.
 Por exemplo, se estiveres na tua pasta pessoal e escreveres `cd Docu` e carregares no _TAB_, vais
   ver que a shell vai completar o comando para ficar `cd Documents/`.
+
+Nem todos os comandos suportam autocompletion, mas quase todos os comandos neste guia suportam.
 
 ## `mkdir`
 
@@ -249,13 +251,13 @@ Para resolver este problema podes usar aspas para definir algo com espaços como
   Em vez de <code>"Uma Pasta"</code>, podes fazer <code>Uma\ Pasta</code>.
   A diferença é que em vez de usar aspas, podes usar o <i>escape character</i> <code>\</code>, que
     permite <b>escapar</b> a função especial de carateres.
-  Como o <code>\</code> é um caráter para escapar funcionalidades, se o quiseres usar de forma
-    literal, tens que o escapar fazendo <code>\\</code>.
+  Como o <code>\</code> também é um caráter especial, se o quiseres usar de forma literal tens que o
+    escapar fazendo <code>\\</code>.
 </details>
 
 ## `rmdir`
 
-O contrário do criar pastas com `mkdir` é removê-las com o `rmdir` (**r**e**m**ove **dir**rectory).
+O contrário de criar pastas com `mkdir` é removê-las com o `rmdir` (**r**e**m**ove **dir**rectory).
 
 Tal como o `mkdir` e maior parte dos outros comandos, o `rmdir` aceita mais que um argumento, por
   isso podemos remover as pastas todas que acabamos de criar (exceto a "Projetos") com um só
@@ -350,16 +352,17 @@ Agora faz <code>cp <b>[original]</b> <b>[novo]</b></code>, e abre o ficheiro nov
 
 Atenção que por predefinição o `cp` apaga o ficheiro de destino se ele já existir, para poder criar
   o novo.
-Usa a flag `-i` para nestes casos o `cp` perguntar se pode apagar os ficheiros.
+Usa a flag `-i` para obrigar o `cp` a perguntar se pode apagar os ficheiros.
 
 Também podes copiar pastas inteiras com a flag `-r`.
 
 ## `mv`
 
-Se quiseres mover um ficheiro de uma pasta para a outra, um simplesmente mudar o nome de um
+Se quiseres mover um ficheiro de uma pasta para a outra, ou simplesmente mudar o nome de um
   ficheiro, podes usar o `mv` (**m**o**v**e).
 Experimenta mudar o nome do ficheiro novo que criaste com o `cp`.
-A forma de o utilizar é igual ao `cp`, <code>mv <b>[caminho antigo]</b> <b>[caminho novo]</b></code>:
+A forma de o utilizar é igual ao `cp`,
+  <code>mv <b>[caminho antigo]</b> <b>[caminho novo]</b></code>:
 
 ![mv](./img/mv.png)
 
@@ -386,8 +389,8 @@ As variáveis de ambiente são variáveis que o sistema operativo e os programas
   estado do sistema e definir comportamentos apropriados.
 
 Por exemplo, lembras-te de eu ter dito na secção de [pseudopastas](#pseudopastas) que maior parte
-  destes comandos são executáveis que estão em pastas especiais, que os permite serem executados a
-  partir de qualquer pasta?
+  destes comandos são ficheiros executáveis que estão em pastas especiais, que os permite serem
+  executados a partir de qualquer pasta?
 Estas pastas especiais são definidas por uma variável de ambiente chamada `PATH`.
 
 Para veres o valor que estas variáveis guardam podes usar o `echo` e por um `$` antes do nome da
@@ -426,7 +429,7 @@ Pega num ficheiro qualquer que tenha texto, ou cria tu um, e faz <code>cat <b>[f
 É provável que te estejas a perguntar porque é que o comando se chama "concatenate".
 A realidade é que o `cat` serve para concatenar o conteúdo de vários ficheiros, fazendo algo do
   género `cat fich1.txt fich2.txt fich3.txt`.
-É só que em prática raramente é necessário fazer isto, por isso o `cat` costuma ser usado só para
+No entanto em prática raramente é necessário fazer isto, por isso o `cat` costuma ser usado só para
   mostrar o conteúdo de um ficheiro.
 
 ## `less`
@@ -441,10 +444,11 @@ Pega num ficheiro, ou cria tu um, com imenso texto, e faz <code>less <b>[ficheir
 
 ![less](./img/less.png)
 
-Para sair do `less`, basta carregar na tecla `Q`.
+Dentro do `less` podes usar as setas do teclado para andar pelo ficheiro, e para sair basta carregar
+  na tecla `Q`.
 
 <details>
-  <summary>CURIOSIDADE: Comando podem usar outros comandos</summary>
+  <summary>CURIOSIDADE: Comandos podem usar outros comandos</summary>
   Provavelmente reparaste que usar o <code>less</code> é bastante parecido a usar o
     <code>man</code>.
   Isso é porque o <code>man</code> usa o <code>less</code> para te mostrar os manuais.
@@ -452,12 +456,12 @@ Para sair do `less`, basta carregar na tecla `Q`.
 
 ## `head` e `tail`
 
-Há outras formas de obter informação de ficheiros grandes sem mostrar tudo.
+Há outras formas de obter o conteúdo de ficheiros grandes sem mostrar tudo.
 Se sabes que a informação que precisas está no início de um ficheiro, podes usar o `head`, e ele
   dá-te as primeiras 10 linhas desse ficheiro:
 
 E para complementar o `head` também tens o `tail`, que te dá as últimas 10 linhas de um ficheiro,
-  caso o que precises esteja no fim do ficheiro.
+  caso o que precises esteja no fim.
 
 ![head](./img/headtail.png)
 
@@ -484,12 +488,12 @@ Para conseguires alterar os ficheiros do sistema, podes usar o `sudo` (**su**per
 
 ![sudo](./img/sudo.png)
 
-Sim, é normal não aparecer nada quando escreves a tua palavra-passe, mas é como se estivesse na
-  mesma.
+Sim, é normal não aparecer nada quando escreves a tua palavra-passe, mas ela está lá.
 Dá para usar as setas do teclado para andar pela palavra-passe e o botão de apagar também funciona.
 
 Se achas que te enganaste a escrever a tua palavra-passe e queres apagar tudo, podes fazer
-_Ctrl + U_ (apaga tudo à esquerda do cursor) em vez de deixar o botão de apagar premido.
+  _Ctrl + U_ (apaga tudo à esquerda do cursor) em vez de deixar o botão de apagar premido durante
+  uns segundos.
 
 ### Instalação de Aplicações
 
@@ -525,7 +529,7 @@ O que acabei de dizer para o `sudo` também se aplica aos comandos que te aparec
 Se não sabes o que um comando faz, não o executes, mesmo que não tenha `sudo`.
 Vou dar três exemplos de comandos que aparecem de vez em quando e que são perigosos.
 
-O primeiro é `sudo rm --rf /`.
+O primeiro é `sudo rm -rf /*`.
 Este vem já com `sudo` e `rm`, dois comandos perigosos juntos.
 Este comando apaga o sistema inteiro, o equivalente a fazer _Shift + Del_ ao `C:\` no Windows.
 Em alguns sistemas também é necessária a flag `--no-preserve-root` para o comando executar, mas
@@ -533,14 +537,14 @@ Em alguns sistemas também é necessária a flag `--no-preserve-root` para o com
 
 O segundo é `:(){ :|:& };:`.
 Este não tem `sudo` nem `rm`, mas não dá para perceber o que faz.
-Este comando é um _[fork bomb](https://en.wikipedia.org/wiki/Fork_bomb)_, e basicamente duplica-se a
-  si mesmo até a RAM do computador ficar cheia, obrigando o utilizador a desligar o computador, e
+Este comando é uma _[fork bomb](https://en.wikipedia.org/wiki/Fork_bomb)_, e basicamente duplica-se
+  a si mesmo até a RAM do computador ficar cheia, obrigando o utilizador a desligar o computador, e
   perder tudo o que estava por gravar.
 
 O terceiro é `cat /dev/urandom | aplay -`.
 Este já não é tão comum de se ver, mas aparece de vez em quando.
 Este comando executa o `aplay`, que serve para tocar ficheiros de áudio, mas troca o ficheiro pelo
-  output `cat /dev/urandom`.
+  output do comando `cat /dev/urandom`.
 Isto acaba por tocar ruído nas colunas ou headphones no volume máximo.
 Não é perigoso para o sistema, mas pode dar um ataque-cardíaco pelo susto.
 
@@ -549,12 +553,12 @@ Não é perigoso para o sistema, mas pode dar um ataque-cardíaco pelo susto.
 Existe um site que ajuda a perceber o que cada comando faz, chamado
   [explainshell.com](https://explainshell.com/).
 
-Não é perfeito, mas ajuda, especialmente para comandos simples que alguém que está a aprender a usar
+Não é perfeito mas ajuda, especialmente para comandos simples que alguém que está a aprender a usar
   o terminal usa.
 
 ## Operadores
 
-As shells, além de suportar comandos, também podem receber operadores em conjunto com os comandos.
+As shells, além de suportarem comandos, também podem receber operadores em conjunto com os comandos.
 Estes operadores permitem tornar o uso do terminal mais flexível, juntando vários comandos num só.
 
 ### `>` e `>>`
@@ -569,15 +573,17 @@ Se quiseres criar um ficheiro novo, mas em vez de ser vazio queres que tenha já
 
 ![redir](./img/redir.png)
 
-Ao contrário do `touch`, o `>` apaga o ficheiro se ele já existir, e os operadores não têm flags,
-  por isso não podes fazer o mesmo que se faz no `cp` e `mv` para prevenir a substituição de um
-  ficheiro por outro.
+Se usares o `>` num ficheiro que já existe, o conteúdo vai ser substitúido em vez de ser
+  acrescentado.
+Caso queiras acrescentar texto a um ficheiro que já existe, usa o `>>` em vez do `>`.
 
-Caso queiras acrescentar texto a um ficheiro que já existe, podes usar o `>>` em vez do `>`:
+Ao contrário do `touch`, o `>` e o `>>` apagam o ficheiro se ele já existir, e como os operadores
+  não têm flags, não podes fazer o mesmo que se faz no `cp` e `mv` para prevenir a substituição de
+  um ficheiro por outro.
 
 ### `&&`, `||`, e `;`
 
-Se quiseres só por comandos a executar uns a seguir aos outros, podes usar o `&&`, o `||`, ou o `;`.
+Se quiseres por comandos a executar uns a seguir aos outros, podes usar o `&&`, o `||`, ou o `;`.
 O uso destes operadores é da forma <code>[comando 1] <b>[operador]</b> [comando 2]</code>.
 
 O `&&` executa o segundo comando apenas se o primeiro terminou com sucesso.
@@ -603,15 +609,15 @@ Por exemplo, se estiveres na tua pasta pessoal e fizeres `ls *`, ele vai fazer `
 Voltando a redirecionamento de output, se quiseres mandar o output de um comando para o input de
   outro, podes usar o `|` (pipe).
 
-Um exemplo comum é uso do `cat` em conjunto com o `grep`.
+Um exemplo comum é o uso do `cat` em conjunto com o `grep`.
 Como sabes, é possível procurar por padrões em ficheiros de texto usando só o `grep`.
-No entanto muita gente está mais habituada a fazer <code>cat <b>[ficheiro]</b> | grep
-  <b>[padrão]</b></code>:
+No entanto muita gente está mais habituada a fazer
+  <code>cat <b>[ficheiro]</b> | grep <b>[padrão]</b></code>:
 
 ![pipe](./img/pipe.png)
 
 Aqui o output do `cat` (o conteúdo do ficheiro) é passado como input do `grep`, e o `grep`, quando
-não recebe um ficheiro, lê do seu input.
+não recebe um ficheiro, lê o input que recebeu.
 Ou seja, neste caso `cat fich.txt | grep texto` em prática é o mesmo que `grep texto fich.txt`.
 
 Outros usos comuns do `|` são com o `ls` para encontrar informação sobre ficheiros em específico,
@@ -639,7 +645,7 @@ Não só isso, se fechares o terminal, qualquer comando que tenhas executado com
 Por exemplo, se fizeres `code . &` e depois fechares o terminal, o editor também é fechado.
 
 Se quiseres ignorar o output de comandos executados com o `&`, podes acrescentar `> /dev/null`
-  antes, que mando o output para um ficheiro especial que ignora tudo o que recebe.
+  antes, que manda o output para um ficheiro especial que ignora tudo o que recebe.
 Se quiseres que o comando continue a executar mesmo fechando o terminal, podes acrescentar `disown`
   ao fim.
 
@@ -650,8 +656,8 @@ Com estes dois ajustes, o comando do "Visual Studio Code" fica assim: `code . > 
 O comando `kill` é usado para enviar sinais a processos que estejam a decorrer.
 Estes sinais servem para avisar os processos que devem fazer algo.
 
-Por predefinição o `kill` manda aos processos um **SIGTERM**, que indica aos processos que devem
-  terminar a execução (dai o nome `kill`).
+Por predefinição o `kill` manda um **SIGTERM**, que indica aos processos que devem terminar a
+  execução (dai o nome `kill`).
 
 O comando usa-se com o **ID** do processo, algo que é mostrado quando fazes `&`.
 No entanto alguns programas criam mais processos quando são executados e terminam o original, como é
@@ -669,10 +675,19 @@ Se um processo não estiver a responder e o `kill` não funcionar, podes usar a 
 ### _Ctrl + C_
 
 Também é possível mandar sinais ao programa que está a correr no terminal sem usar comandos.
-Se quiseres parar o programa que está a correr (por exemplo encravou e não acaba), podes mandar um
-  **SIGTERM** fazendo _Ctrl + C_.
+Se executaste um comando sem o `&` e queres pará-lo (por exemplo encravou e não acaba), podes mandar
+  um **SIGTERM** fazendo _Ctrl + C_.
+
 
 Se quiseres copiar texto, tens que fazer _Ctrl + Shift + C_ (e para colar é _Ctrl + Shift + V_).
+
+<details>
+  <summary>CURIOSIDADE: Copiar texto no terminal</summary>
+  O _Ctrl + C_ costuma ser usado para copiar texto, mas como aqui é usado para outra coisa, temos
+    que usar outra combinação de teclas.
+  Para copiar texto, usa _Ctrl + Shift + C_.
+  Para colar, usa _Ctrl + Shift + V_.
+</details>
 
 ## `exit`
 
@@ -680,11 +695,12 @@ O comando `exit` é bastante simples, e serve apenas para terminar a sessão atu
 
 ### _Ctrl + D_
 
-Tal como o `clear`, o `exit` pode ser trocado por _Ctrl + D_.
+Tal como o `clear`, o `exit` também pode ser trocado por uma combinação de teclas, neste caso
+  _Ctrl + D_.
 
-No entanto o _Ctrl + D_ também serve do caráter **EOF** (end of file).
+No entanto o _Ctrl + D_ também serve de caráter **EOF** (end of file).
 Por exemplo, se fizeres `cat > fich.txt`, o `cat` fica à espera do teu input, e
-  só termina quando receber um **EOF**.
+  só termina quando receber um **EOF**, ou seja, quando fizeres _Ctrl + D_.
 
 # Conclusão
 
