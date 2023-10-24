@@ -212,6 +212,18 @@ Faz `man` com os comandos que vais aprendendo.
 Este guia só introduz cada comando, mas com `man` ficas a perceber melhor o que cada comando faz, e
   até pode ser que encontres flags que te deem jeito para alguns comandos.
 
+### Setas e TAB
+
+As setas não são exclusivas ao `man`.
+Provavelmente já reparaste que podes usar as setas da esquerda e da direita para andar pelo comando
+  atual, para o poderes editar antes de o executar.
+Também podes usar as setas de cima e de baixo para veres os comandos que executaste antes, porque a
+  a shell guarda um histórico de comandos executados.
+
+Além das setas, podes também usar o _TAB_ para fazer autocomplete.
+Por exemplo, se estiveres na tua pasta pessoal e escreveres `cd Docu` e carregares no _TAB_, vais
+  ver que a shell vai completar o comando para ficar `cd Documents/`.
+
 ## `mkdir`
 
 Como vais precisar de um sítio para guardares os programas que vais fazer durante a faculdade, vamos
@@ -658,11 +670,19 @@ Uma alternativa é usar o comando `pkill`, que junta o `pgrep` e o `kill`.
 Se um processo não estiver a responder e o `kill` não funcionar, podes usar a flag `-9` para mandar
   um **SIGKILL**, que faz com que o sistema operativo force a terminação do processo.
 
+### _Ctrl + C_
+
+Também é possível mandar sinais ao programa que está a correr no terminal sem usar comandos.
+Se quiseres parar o programa que está a correr (por exemplo encravou e não acaba), podes mandar um
+  **SIGTERM** fazendo _Ctrl + C_.
+
+Se quiseres copiar texto, tens que fazer _Ctrl + Shift + C_ (e para colar é _Ctrl + Shift + V_).
+
 ## `exit`
 
 O comando `exit` é bastante simples, e serve apenas para terminar a sessão atual do terminal.
 
-### **Ctrl + D**
+### _Ctrl + D_
 
 Tal como o `clear`, o `exit` pode ser trocado por _Ctrl + D_.
 
@@ -677,7 +697,7 @@ Chegaste ao fim deste guia.
 Obviamente que há muita mais coisa para aprender, mas já sabes o básico.
 O resto vais aprender à medida que usas o terminal.
 
-Se tiveres alguma dúvida podes mandar-me um email a
+Se tiveres alguma dúvida podes mandar-me um email para
   [pilltime@protonmail.com](mailto:pilltime@protonmail.com).
 Se preferires mandar mensagem pelo Discord, o meu username é
   [pill](https://discord.com/users/66135744967610368).
