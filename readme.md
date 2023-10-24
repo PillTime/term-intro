@@ -60,8 +60,8 @@ Normalmente as shells estão configuradas para mostrar `#` quando estamos com o 
 
 Vamos então começar com comandos.
 
-O primeiro comando que vamos ver é bastante simples, e chama-se `pwd` (**P**rint **W**orking
-  **D**irectory).
+O primeiro comando que vamos ver é bastante simples, e chama-se `pwd` (**p**rint **w**orking
+  **d**irectory).
 Experimenta correr o comando.
 Escreve `pwd` e carrega _Enter_, vais ter um output do género:
 
@@ -95,7 +95,7 @@ Carrega nela e executa `pwd` no terminal que te aparece:
 
 ## `ls`
 
-O próximo comando que vamos ver é o `ls` (**L**i**S**t), que serve para listar o conteúdo de pastas.
+O próximo comando que vamos ver é o `ls` (**l**i**s**t), que serve para listar o conteúdo de pastas.
 
 Basta fazer `ls` e ficas a saber o que está dentro da pasta atual:
 
@@ -187,7 +187,7 @@ Estas pastas ainda podem parecer um bocado esquisitas, mas acredita, vais usá-l
 ## `man`
 
 Se estiveres a pensar "Onde é que descubro que flags é que cada comando suporta?", a resposta é
-  `man` (**MAN**ual).
+  `man` (**man**ual).
 O comando `man` mostra bastante informação sobre cada comando, tal como se usa, que flags suporta,
   etc.
 
@@ -224,7 +224,7 @@ Por exemplo, se estiveres na tua pasta pessoal e escreveres `cd Docu` e carregar
 
 Como vais precisar de um sítio para guardares os programas que vais fazer durante a faculdade, vamos
   criar uma pasta para eles.
-Podemos criar pastas com o comando `mkdir` (**M**a**K**e **DIR**ectory).
+Podemos criar pastas com o comando `mkdir` (**m**a**k**e **dir**ectory).
 
 Para criar uma pasta chamada "Projetos", faz `mkdir Projetos`.
 Podes usar o `ls` para verificar que o comando funcionou:
@@ -255,7 +255,7 @@ Para resolver este problema podes usar aspas para definir algo com espaços como
 
 ## `rmdir`
 
-O contrário do criar pastas com `mkdir` é removê-las com o `rmdir` (**R**e**M**ove **DIR**rectory).
+O contrário do criar pastas com `mkdir` é removê-las com o `rmdir` (**r**e**m**ove **dir**rectory).
 
 Tal como o `mkdir` e maior parte dos outros comandos, o `rmdir` aceita mais que um argumento, por
   isso podemos remover as pastas todas que acabamos de criar (exceto a "Projetos") com um só
@@ -269,7 +269,7 @@ Se a pasta tiver alguma coisa lá dentro, o comando vai-se queixar.
 ## `cd`
 
 Já temos uma pasta para os teus projetos criada, agora falta saber entrar lá.
-Para isso podemos usar o `cd` (**C**hange **D**irectory).
+Para isso podemos usar o `cd` (**c**hange **d**irectory).
 
 Provavelmente já estás a imaginar como é que o comando funciona: <code>cd <b>[pasta]</b></code>.
 Faz `cd Projetos`:
@@ -322,7 +322,7 @@ O típico é fazer `touch .gitkeep` nessas pastas vazias (o nome do ficheiro nã
 
 ## `rm`
 
-Para se opor ao `touch`, temos o `rm` (**R**e**M**ove) que serve para remover ficheiros.
+Para se opor ao `touch`, temos o `rm` (**r**e**m**ove) que serve para remover ficheiros.
 
 Usa `rm ola.txt` para remover o ficheiro que acabaste de criar:
 
@@ -342,7 +342,7 @@ Por isso recomendo que uses o explorador de ficheiros para apagar o que for prec
 ## `cp`
 
 Agora que já sabemos criar e apagar ficheiros podemos passar a aprender a copiá-los com o `cp`
-  (**C**o**P**y).
+  (**c**o**p**y).
 Criar um ficheiro novo com o `touch`, abre-o num editor de texto, e mete um texto qualquer lá.
 Agora faz <code>cp <b>[original]</b> <b>[novo]</b></code>, e abre o ficheiro novo:
 
@@ -357,7 +357,7 @@ Também podes copiar pastas inteiras com a flag `-r`.
 ## `mv`
 
 Se quiseres mover um ficheiro de uma pasta para a outra, um simplesmente mudar o nome de um
-  ficheiro, podes usar o `mv` (**M**o**V**e).
+  ficheiro, podes usar o `mv` (**m**o**v**e).
 Experimenta mudar o nome do ficheiro novo que criaste com o `cp`.
 A forma de o utilizar é igual ao `cp`, <code>mv <b>[caminho antigo]</b> <b>[caminho novo]</b></code>:
 
@@ -400,8 +400,8 @@ Atenção que podes usar variáveis de ambiente com qualquer comando, não só o
 
 ### `env`
 
-Também existe o comando `env`, que mostra todas as variáveis de ambiente presentes na sessão e os
-  seus valores:
+Também existe o comando `env` (**env**ironment), que mostra todas as variáveis de ambiente presentes
+  na sessão e os seus valores:
 
 ![env](./img/env.png)
 
@@ -417,7 +417,7 @@ E há mais coisas em que o `echo` dá jeito, mas vou falar delas mais à frente.
 ## `cat`
 
 Se quiseres ver o conteúdo de um ficheiro sem sair do terminal podes usar o `cat`
-  (**C**onc**AT**enate).
+  (**c**onc**at**enate).
 
 Pega num ficheiro qualquer que tenha texto, ou cria tu um, e faz <code>cat <b>[ficheiro]</b></code>:
 
@@ -480,7 +480,7 @@ Se precisares de fazer `cp` ou `mv` a ficheiros que não estejam na tua pasta pe
   parado pela shell por não teres permissões suficientes, porque os ficheiros fora da tua pasta
   pessoal pertencem ao sistema, e não a ti.
 
-Para conseguires alterar os ficheiros do sistema, podes usar o `sudo` (**SU**peruser **DO**):
+Para conseguires alterar os ficheiros do sistema, podes usar o `sudo` (**su**peruser **do**):
 
 ![sudo](./img/sudo.png)
 
