@@ -89,12 +89,8 @@ Carrega nela e executa `pwd` no terminal que te aparece:
     ser utilizado.
 
   Há quem diga que há realmente uma diferença, e até podem ter alguma razão (aceito
-    [este argumento](https://retrocomputing.stackexchange.com/a/26176)), mas há dois casos que não
-    tem razão absolutamente nenhuma:
-  <ul>
-    <li>Se disserem que "diretório" é o quando usas o terminal e "pasta" é o quando usas GUI.</li>
-    <li>Se disserem que é "pasta" no Windows e macOS, e "diretório" nos outros SOs.</li>
-  </ul>
+    [este argumento](https://retrocomputing.stackexchange.com/a/26176)), mas a realidade é
+    simplesmente que alguém decidiu mudar o nome de "diretório" para "pasta", e o mundo seguiu.
 </details>
 
 ## `ls`
