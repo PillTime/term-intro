@@ -712,4 +712,4 @@ O resto vais aprender à medida que usas o terminal.
 Se tiveres alguma dúvida podes mandar-me um email para
   [pilltime@protonmail.com](mailto:pilltime@protonmail.com).
 Se preferires mandar mensagem pelo Discord, o meu username é
-  [pill](https://discord.com/users/66135744967610368).
+  [pill.time](https://discord.com/users/1199278467724877867).
