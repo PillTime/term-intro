@@ -3,8 +3,6 @@
 Bem-vindo à **Introdução ao Terminal** do NuCC.
 Este guia tem como objetivo ensinar-te o essencial para poderes usar o terminal.
 
-Não vale a pena estar a preencher isto com texto desnecessário, por isso vamos começar já.
-
 ## Terminal e Shell
 
 Começa por abrir o terminal.
