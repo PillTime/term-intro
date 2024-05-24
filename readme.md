@@ -65,7 +65,7 @@ Escreve `pwd` e carrega _Enter_, vais ter um output do género:
 
 ![pwd](./img/pwd.png)
 
-No teu caso a pasta deve ter um nome diferente por causa do nome to teu utilizador, mas também deve
+No teu caso a pasta deve ter um nome diferente por causa do nome do teu utilizador, mas também deve
   estar dentro da pasta `/home`, que é a pasta onde as pastas pessoais costumam ficar.
 
 O `pwd` é raramente usado, não por ser um comando bastante simples, mas porque a informação que ele
@@ -171,7 +171,7 @@ Estas são na realidade pseudopastas, e existem em todas as pastas, mesmo as que
 Esta pseudopasta serve na maioria dos casos para correr um ficheiro executável que está na pasta
   atual.
 Já agora, praticamente todos os comandos neste guia são ficheiros executáveis também, tais como os
-  que tu vais escrever ao longo da faculdade, mas estão em pastas especiais que os permite serem
+  que tu vais escrever ao longo da faculdade, mas estão em pastas especiais que os permitem serem
   executados a partir de qualquer pasta.
 
 A pasta `..` é a pasta pai, ou seja, se eu estiver na pasta `/home/carlos`, fazer `ls ..` vai-me
@@ -180,7 +180,7 @@ Também podes usar `..` várias vezes no mesmo caminho.
 Seguindo o exemplo anterior em que estou na minha pasta pessoal, se eu fizer `ls ../..`, vou receber
   o conteúdo da pasta `/`.
 
-Estas pastas ainda podem parecer um bocado esquisitas, mas acredita, vais usá-las imenso.
+Estas pseudopastas ainda podem parecer um bocado esquisitas, mas acredita, vais usá-las imenso.
 
 ## `man`
 
@@ -204,7 +204,7 @@ Por exemplo, se fizeres `man 3 stdio`, o `man` vai-te dar informação sobre a b
 
 Faz `man` com os comandos que vais aprendendo.
 Este guia só introduz cada comando, mas com `man` ficas a perceber melhor o que cada comando faz, e
-  até pode ser que encontres flags que te deem jeito para alguns comandos.
+  até pode ser que encontres flags que te dêem jeito para alguns comandos.
 
 ### Setas e TAB
 
@@ -218,7 +218,8 @@ Além das setas, podes também usar o _TAB_ para fazer autocomplete.
 Por exemplo, se estiveres na tua pasta pessoal e escreveres `cd Docu` e carregares no _TAB_, vais
   ver que a shell vai completar o comando para ficar `cd Documents/`.
 
-Nem todos os comandos suportam autocompletion, mas quase todos os comandos neste guia suportam.
+Nem todos os comandos suportam autocompletion, mas maior parte suporta, incluindo os comandos deste
+  guia.
 
 ## `mkdir`
 
