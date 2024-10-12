@@ -21,13 +21,14 @@ O segundo programa é a **shell**, e está a correr dentro do terminal.
 A shell é o programa que dá output do texto (incluindo o que aparece ao iniciar o terminal), e lê,
   interpreta, e executa os comandos que lhe dás.
 
-_**Basicamente, o cérebro do terminal é a shell.**_
+_**Basicamente, a shell é o cérebro do terminal.**_
 
 Existem várias shells, mas quase todas as distribuições usam a mesma por predefinição: **`bash`**.
 
 <details>
   <summary>NOTA: Acerca do nome <b>terminal</b></summary>
-  Na realidade um terminal é o ecrã preto que (possivelmente) aparece quando ligas o computador.
+  Na realidade um terminal é o ecrã preto com texto que (possivelmente) aparece quando ligas o
+    computador.
   O "terminal" que estamos a usar é um <b>emulador de terminal</b>, mas não vale a pena estar a ser
     tão pedante.
 </details>
@@ -86,9 +87,9 @@ Carrega nela e executa `pwd` no terminal que te aparece:
   "Diretório" era o termo usado antigamente, e com o surgimento de GUIs, o nome "pasta" começou a
     ser utilizado.
 
-  Há quem diga que há realmente uma diferença, e até podem ter alguma razão (aceito
+  Há quem diga que há realmente uma diferença (aceito
     [este argumento](https://retrocomputing.stackexchange.com/a/26176)), mas a realidade é
-    simplesmente que alguém decidiu mudar o nome de "diretório" para "pasta", e o mundo seguiu.
+    simplesmente que alguém decidiu chamar "pastas" a "diretórios", e o mundo seguiu.
 </details>
 
 ## `ls`
@@ -134,8 +135,8 @@ Ou seja, para ver o conteúdo da minha pasta de documentos, também posso fazer 
 ### Flags
 
 Existe um tipo especial de argumentos, chamados de flags.
-As flags servem para alterar o funcionamento dos comandos, e cada comando tem as suas flags, não são
-  coisas que todos os comandos partilham.
+As flags servem para alterar o funcionamento dos comandos, e cada comando tem as suas flags.
+Não são coisas que todos os comandos partilham.
 
 Existem flags curtas, que começam por `-`, e flags longas, que começam por `--`.
 Normalmente, as flags curtas são compostas por um caráter (por exemplo `-i`), e as flags longas são
@@ -145,13 +146,13 @@ Quase sempre, cada flag curta tem uma flag longa correspondente, mas o oposto j�
 Muitos programas também aceitam juntar flags curtas numa só para não ocuparem tanto espaço.
 Por exemplo, no comando `ls` que estamos a ver, as flags `-A -l -h` podem ser escritas como `-Alh`.
 
-Flags também podem receber argumentos.
+Algumas flags também podem receber argumentos.
 Nas flags curtas os argumentos costumam ser separados por um espaço (por exemplo `-f fich.txt`), e
   nas flags longas costumam ser separados por um `=` (por exemplo `--file=fich.txt`).
 
 ### Ficheiros Escondidos
 
-Com isto, vamos usar flags para mudar o comportamento do `ls`.
+Com este conhecimento, vamos usar flags para mudar o comportamento do `ls`.
 Por predefinição o `ls` só mostra os ficheiros e pastas normais, mas também existem ficheiros e
   pastas escondidos.
 Estes são os que têm o nome a começar por `.`.
@@ -171,8 +172,8 @@ Estas são na realidade pseudopastas, e existem em todas as pastas, mesmo as que
 Esta pseudopasta serve na maioria dos casos para correr um ficheiro executável que está na pasta
   atual.
 Já agora, praticamente todos os comandos neste guia são ficheiros executáveis também, tais como os
-  que tu vais escrever ao longo da faculdade, mas estão em pastas especiais que os permitem serem
-  executados a partir de qualquer pasta.
+  programs que vais escrever ao longo da faculdade, mas estão em pastas especiais que os permitem
+  serem executados a partir de qualquer pasta do sistema.
 
 A pasta `..` é a pasta pai, ou seja, se eu estiver na pasta `/home/carlos`, fazer `ls ..` vai-me
   mostrar o conteúdo da pasta `/home`.
@@ -215,8 +216,8 @@ Também podes usar as setas de cima e de baixo para veres os comandos que execut
   shell guarda um histórico de comandos executados.
 
 Além das setas, podes também usar o _TAB_ para fazer autocomplete.
-Por exemplo, se estiveres na tua pasta pessoal e escreveres `cd Docu` e carregares no _TAB_, vais
-  ver que a shell vai completar o comando para ficar `cd Documents/`.
+Por exemplo, se estiveres na tua pasta pessoal e escreveres `ls Docu` e carregares no _TAB_, vais
+  ver que a shell vai completar o comando para ficar `ls Documents/`.
 
 Nem todos os comandos suportam autocompletion, mas maior parte suporta, incluindo os comandos deste
   guia.
